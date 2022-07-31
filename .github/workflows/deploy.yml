@@ -1,0 +1,27 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "master" branch
+  push:
+    branches: [ "master" ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: node check
+        uses: actions/checkout@v3
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - name: build
+        run: npm install & npm g
+      - name: deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with: 
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-page
+          publish_dir: public
+          cname: blog.ltfy.top

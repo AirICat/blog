@@ -16,7 +16,7 @@ jobs:
         with:
           node-version: 16
       - name: build
-        run: npm install & npx hexo g
+        run: npm install & hexo generate
       - name: deploy
         uses: peaceiris/actions-gh-pages@v3
         with: 

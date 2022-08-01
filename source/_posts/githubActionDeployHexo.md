@@ -1,5 +1,5 @@
 ---
-title: githubAction自动化部署hexo博客
+title: github Action自动化部署hexo博客
 date: 2022-08-01 13:25:31
 tags: 
     - Github
@@ -31,7 +31,7 @@ jobs:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: latest
       - name: build
         run: npm install && npx hexo generate
       - name: deploy

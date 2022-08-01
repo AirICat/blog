@@ -26,13 +26,15 @@
 <meta property="og:description" content="前言抱着能偷懒 就偷懒的心态研究了下GitHub Action 好家伙英文中文混合开火 直接给我干蒙了简单的看了下 还是成功了 后面有时间还是要了解下的 感觉很有用 现在就是能用就行 创建GitHub Action 打开GitHub 仓库位置  点击 Action 点击 new workflows 写入 1234567891011121314151617181920212223name: depl">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-08-01T13:25:31.000Z">
-<meta property="article:modified_time" content="2022-08-01T14:12:25.860Z">
+<meta property="article:modified_time" content="2022-08-01T15:24:39.558Z">
 <meta property="article:author" content="AirICat">
 <meta property="article:tag" content="Github">
 <meta property="article:tag" content="GithubAction">
 <meta property="article:tag" content="hexo">
 <meta name="twitter:card" content="summary_large_image">
   
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
   
   
   <title>github Action自动化部署hexo博客 - 烛梦小屋</title>
@@ -208,6 +210,11 @@
           
   <div class="mt-3">
     
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-author" aria-hidden="true"></i>
+        AirICat
+      </span>
+    
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
@@ -223,7 +230,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          553 字
+          607 字
         
       </span>
     
@@ -234,12 +241,20 @@
         
         
         
-          5 分钟
+          6 分钟
         
       </span>
     
 
     
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+      
     
   </div>
 
@@ -274,6 +289,14 @@
             <!-- SEO header -->
             <h1 style="display: none">github Action自动化部署hexo博客</h1>
             
+              <p class="note note-info">
+                
+                  
+                    本文最后更新于：2022年8月1日 下午
+                  
+                
+              </p>
+            
             
               <div class="markdown-body">
                 
@@ -284,6 +307,7 @@
 <li>点击 new workflows</li>
 <li>写入 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs yml"><span class="hljs-attr">name:</span> <span class="hljs-string">deploy</span><br><br><span class="hljs-attr">on:</span><br>  <span class="hljs-attr">push:</span><br>    <span class="hljs-attr">branches:</span> [ <span class="hljs-string">&quot;master&quot;</span> ]<br><span class="hljs-attr">jobs:</span><br>  <span class="hljs-attr">build:</span><br>    <span class="hljs-attr">runs-on:</span> <span class="hljs-string">ubuntu-latest</span><br>    <span class="hljs-attr">steps:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">uses:</span> <span class="hljs-string">actions/checkout@v3</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">uses:</span> <span class="hljs-string">actions/setup-node@v3</span><br>        <span class="hljs-attr">with:</span><br>          <span class="hljs-attr">node-version:</span> <span class="hljs-string">latest</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">build</span><br>        <span class="hljs-attr">run:</span> <span class="hljs-string">npm</span> <span class="hljs-string">install</span> <span class="hljs-string">&amp;&amp;</span> <span class="hljs-string">npx</span> <span class="hljs-string">hexo</span> <span class="hljs-string">generate</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">deploy</span><br>        <span class="hljs-attr">uses:</span> <span class="hljs-string">peaceiris/actions-gh-pages@v3</span><br>        <span class="hljs-attr">with:</span> <br>          <span class="hljs-attr">github_token:</span> <span class="hljs-string">$&#123;&#123;</span> <span class="hljs-string">secrets.GITHUB_TOKEN</span> <span class="hljs-string">&#125;&#125;</span><br>          <span class="hljs-attr">publish_branch:</span> <span class="hljs-string">gh-pages</span><br>          <span class="hljs-attr">publish_dir:</span> <span class="hljs-string">public</span><br>          <span class="hljs-attr">cname:</span> <span class="hljs-string">you.webSite.com</span><br><br></code></pre></td></tr></table></figure></li>
 </ol>
+<h1 id="相关参考"><a href="#相关参考" class="headerlink" title="相关参考"></a>相关参考</h1><p><a target="_blank" rel="noopener" href="https://github.com/marketplace?type=actions&query=actions">Github Actiom 市场</a><br><a target="_blank" rel="noopener" href="https://github.com/actions/setup-node">Action nodejs-setup</a><br><a target="_blank" rel="noopener" href="https://github.com/peaceiris/actions-gh-pages">Action deploy-pages</a></p>
 
                 
               </div>
@@ -616,6 +640,8 @@
   <script>Fluid.plugins.imageCaption();</script>
 
   <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
 
 
 

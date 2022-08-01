@@ -7,7 +7,6 @@ tags:
     - hexo
 categories:
     - [Github,Action]
-updated:
 ---
 # 前言
 抱着能偷懒 就偷懒的心态研究了下GitHub Action 好家伙英文中文混合开火 直接给我干蒙了 
@@ -43,3 +42,8 @@ jobs:
           cname: you.webSite.com
 
 ```
+
+# 相关参考
+[Github Actiom 市场](https://github.com/marketplace?type=actions&query=actions)
+[Action nodejs-setup](https://github.com/actions/setup-node)
+[Action deploy-pages](https://github.com/peaceiris/actions-gh-pages)

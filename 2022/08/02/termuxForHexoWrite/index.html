@@ -18,26 +18,25 @@
   <meta name="author" content="AirICat">
   <meta name="keywords" content="">
   
-    <meta name="description" content="前言抱着能偷懒 就偷懒的心态研究了下GitHub Action 好家伙英文中文混合开火 直接给我干蒙了简单的看了下 还是成功了 后面有时间还是要了解下的 感觉很有用 现在就是能用就行 创建GitHub Action 打开GitHub 仓库位置  点击 Action 点击 new workflows 写入 1234567891011121314151617181920212223name: depl">
+    <meta name="description" content="前言由于不可抗力因素 使得我有时不能使用电脑于是我想要不用手机搭出一个hexo环境 解释 为什么用proot容器 而不是 termux直接运行因为容器能隔离…. 好吧是我当时遇到了bug所以想用容器试 然后弄着弄着就知道怎么解决了也懒得再试一次   在termux下使用什么编写博客呢？本文由于我要学下vim&#x2F;neovim  所以用的neovim编写  不过如果你不喜欢这样，推荐你使用 t">
 <meta property="og:type" content="article">
-<meta property="og:title" content="github Action自动化部署hexo博客">
-<meta property="og:url" content="https://blog.ltfy.top/2022/08/01/githubActionDeployHexo/index.html">
+<meta property="og:title" content="termuxForHexoWrite">
+<meta property="og:url" content="https://blog.ltfy.top/2022/08/02/termuxForHexoWrite/index.html">
 <meta property="og:site_name" content="烛梦小屋">
-<meta property="og:description" content="前言抱着能偷懒 就偷懒的心态研究了下GitHub Action 好家伙英文中文混合开火 直接给我干蒙了简单的看了下 还是成功了 后面有时间还是要了解下的 感觉很有用 现在就是能用就行 创建GitHub Action 打开GitHub 仓库位置  点击 Action 点击 new workflows 写入 1234567891011121314151617181920212223name: depl">
+<meta property="og:description" content="前言由于不可抗力因素 使得我有时不能使用电脑于是我想要不用手机搭出一个hexo环境 解释 为什么用proot容器 而不是 termux直接运行因为容器能隔离…. 好吧是我当时遇到了bug所以想用容器试 然后弄着弄着就知道怎么解决了也懒得再试一次   在termux下使用什么编写博客呢？本文由于我要学下vim&#x2F;neovim  所以用的neovim编写  不过如果你不喜欢这样，推荐你使用 t">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-08-01T13:25:31.000Z">
+<meta property="article:published_time" content="2022-08-02T16:05:51.000Z">
 <meta property="article:modified_time" content="2022-08-02T17:40:26.660Z">
 <meta property="article:author" content="AirICat">
-<meta property="article:tag" content="Github">
-<meta property="article:tag" content="GithubAction">
 <meta property="article:tag" content="hexo">
+<meta property="article:tag" content="termux">
 <meta name="twitter:card" content="summary_large_image">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>github Action自动化部署hexo博客 - 烛梦小屋</title>
+  <title>termuxForHexoWrite - 烛梦小屋</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -202,7 +201,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="github Action自动化部署hexo博客"></span>
+            <span id="subtitle" data-typed-text="termuxForHexoWrite"></span>
           
         </div>
 
@@ -218,8 +217,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-08-01 13:25" pubdate>
-          2022年8月1日 下午
+        <time datetime="2022-08-02 16:05" pubdate>
+          2022年8月2日 下午
         </time>
       </span>
     
@@ -230,7 +229,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          607 字
+          1.1k 字
         
       </span>
     
@@ -241,7 +240,7 @@
         
         
         
-          6 分钟
+          10 分钟
         
       </span>
     
@@ -287,7 +286,7 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">github Action自动化部署hexo博客</h1>
+            <h1 style="display: none">termuxForHexoWrite</h1>
             
               <p class="note note-info">
                 
@@ -300,14 +299,33 @@
             
               <div class="markdown-body">
                 
-                <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>抱着能偷懒 就偷懒的心态研究了下GitHub Action 好家伙英文中文混合开火 直接给我干蒙了<br>简单的看了下 还是成功了 后面有时间还是要了解下的 感觉很有用 <em>现在就是能用就行</em></p>
-<h1 id="创建GitHub-Action"><a href="#创建GitHub-Action" class="headerlink" title="创建GitHub Action"></a>创建GitHub Action</h1><ol>
-<li>打开GitHub 仓库位置 </li>
-<li>点击 Action</li>
-<li>点击 new workflows</li>
-<li>写入 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs yml"><span class="hljs-attr">name:</span> <span class="hljs-string">deploy</span><br><br><span class="hljs-attr">on:</span><br>  <span class="hljs-attr">push:</span><br>    <span class="hljs-attr">branches:</span> [ <span class="hljs-string">&quot;master&quot;</span> ]<br><span class="hljs-attr">jobs:</span><br>  <span class="hljs-attr">build:</span><br>    <span class="hljs-attr">runs-on:</span> <span class="hljs-string">ubuntu-latest</span><br>    <span class="hljs-attr">steps:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">uses:</span> <span class="hljs-string">actions/checkout@v3</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">uses:</span> <span class="hljs-string">actions/setup-node@v3</span><br>        <span class="hljs-attr">with:</span><br>          <span class="hljs-attr">node-version:</span> <span class="hljs-string">latest</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">build</span><br>        <span class="hljs-attr">run:</span> <span class="hljs-string">npm</span> <span class="hljs-string">install</span> <span class="hljs-string">&amp;&amp;</span> <span class="hljs-string">npx</span> <span class="hljs-string">hexo</span> <span class="hljs-string">generate</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">deploy</span><br>        <span class="hljs-attr">uses:</span> <span class="hljs-string">peaceiris/actions-gh-pages@v3</span><br>        <span class="hljs-attr">with:</span> <br>          <span class="hljs-attr">github_token:</span> <span class="hljs-string">$&#123;&#123;</span> <span class="hljs-string">secrets.GITHUB_TOKEN</span> <span class="hljs-string">&#125;&#125;</span><br>          <span class="hljs-attr">publish_branch:</span> <span class="hljs-string">gh-pages</span><br>          <span class="hljs-attr">publish_dir:</span> <span class="hljs-string">public</span><br>          <span class="hljs-attr">cname:</span> <span class="hljs-string">you.webSite.com</span><br><br></code></pre></td></tr></table></figure></li>
+                <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>由于不可抗力因素 使得我有时不能使用电脑<br>于是我想要不用手机搭出一个hexo环境</p>
+<h1 id="解释"><a href="#解释" class="headerlink" title="解释"></a>解释</h1><ol>
+<li>为什么用proot容器 而不是 termux直接运行<br>因为容器能隔离…. 好吧是我当时遇到了bug所以想用容器试<blockquote>
+<p>然后弄着弄着就知道怎么解决了也懒得再试一次</p>
+</blockquote>
+</li>
+<li>在termux下使用什么编写博客呢？<br>本文由于我要学下<em>vim&#x2F;neovim</em>  所以用的neovim编写</li>
 </ol>
-<h1 id="相关参考"><a href="#相关参考" class="headerlink" title="相关参考"></a>相关参考</h1><p><a target="_blank" rel="noopener" href="https://github.com/marketplace?type=actions&query=actions">Github Actiom 市场</a><br><a target="_blank" rel="noopener" href="https://github.com/actions/setup-node">Action nodejs-setup</a><br><a target="_blank" rel="noopener" href="https://github.com/peaceiris/actions-gh-pages">Action deploy-pages</a></p>
+<p>不过如果你不喜欢这样，推荐你使用 <code>termux-setup-storage</code> 将blog目录放置在可访问的储存中 供其他编辑器访问</p>
+<h1 id="配置运行环境"><a href="#配置运行环境" class="headerlink" title="配置运行环境"></a>配置运行环境</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs bash">pkg install proot-distro<br><span class="hljs-comment"># 安装容器</span><br><br>proot-distro install debian<br><span class="hljs-comment"># 选择Debian容器安装</span><br><br>proot-distro login debian<br><span class="hljs-comment">#登入Debian容器</span><br><br>apt update<br><span class="hljs-comment">#更新软件列表</span><br><br>apt install git nodejs yarnpkg neovim<br><span class="hljs-comment">#如果你不需要neovim 可以不安装</span><br></code></pre></td></tr></table></figure>
+
+<p>这有比较坑的点 </p>
+<ol>
+<li>这个容器nodejs版本低 但达到 hexo推荐的 v12</li>
+<li>它不自带npm 还是怎么的 我去直接懵了 看看node-npm 看看yarnpkg (apt search到的) 选择了yarn 也就是yarnpkg</li>
+</ol>
+<h1 id="git-初始化仓库"><a href="#git-初始化仓库" class="headerlink" title="git 初始化仓库"></a>git 初始化仓库</h1><ol>
+<li>如果你是第一次创建hexo 博客<br>请参看hexo文档 <strong>现在没时间后面再补</strong></li>
+<li>如果你已有仓库在GitHub<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">git config -global user.name <span class="hljs-string">&quot;youname&quot;</span><br>git config -global user.email <span class="hljs-string">&quot;youemail&quot;</span><br><span class="hljs-comment">#将youname换成你想要在提交时的名字 youemail同理</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ssh-keygen -C <span class="hljs-string">&quot;写入备注&quot;</span><br></code></pre></td></tr></table></figure>
+此时会让你选择保存路径 就选择默认的目录<br>后面它会让你输入一个密码 这个密码将在你push时需要输入验证不需要就回车省略<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">git <span class="hljs-built_in">clone</span> git@github.com:youname/yourepo.git<br><span class="hljs-comment"># 将 youname 换成 你的名字 yourepo 换成你的仓库名</span><br><br></code></pre></td></tr></table></figure>
+如果你用的不是这个（ssh）而是http ，那验证的就是账号密码而不是ssh密钥了<br>对了先clone再操作不然你先init后面文件pull不下来改什么东西麻烦死了</li>
+</ol>
+<h1 id="Hexo-使用"><a href="#Hexo-使用" class="headerlink" title="Hexo 使用"></a>Hexo 使用</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> yourepo<br><span class="hljs-comment">#进入你的仓库</span><br><br>yarnpkg <br><span class="hljs-comment">#补全 node_models</span><br><br>yarnpkg hexo <br><span class="hljs-comment">#是否能正常使用 hexo</span><br></code></pre></td></tr></table></figure>
+
+<h1 id="优化-命令唤出"><a href="#优化-命令唤出" class="headerlink" title="优化 命令唤出"></a>优化 命令唤出</h1><p>在 termux用户目录下（~）编辑.bashrc 加入</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">alias</span> debian=<span class="hljs-string">&#x27;proot-distro login debian&#x27;</span><br></code></pre></td></tr></table></figure>
 
                 
               </div>
@@ -326,12 +344,12 @@
     
       <span class="category-chain">
         
-  <a href="/categories/Github/" class="category-chain-item">Github</a>
+  <a href="/categories/Adroid/" class="category-chain-item">Adroid</a>
   
   
     <span>></span>
     
-  <a href="/categories/Github/Action/" class="category-chain-item">Action</a>
+  <a href="/categories/Adroid/termux/" class="category-chain-item">termux</a>
   
   
 
@@ -348,11 +366,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Github/">#Github</a>
-      
-        <a href="/tags/GithubAction/">#GithubAction</a>
-      
         <a href="/tags/hexo/">#hexo</a>
+      
+        <a href="/tags/termux/">#termux</a>
       
     </div>
   
@@ -364,8 +380,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>github Action自动化部署hexo博客</div>
-      <div>https://blog.ltfy.top/2022/08/01/githubActionDeployHexo/</div>
+      <div>termuxForHexoWrite</div>
+      <div>https://blog.ltfy.top/2022/08/02/termuxForHexoWrite/</div>
     </div>
     <div class="license-meta">
       
@@ -377,7 +393,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年8月1日</div>
+          <div>2022年8月2日</div>
         </div>
       
       
@@ -407,18 +423,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/08/02/termuxForHexoWrite/" title="termuxForHexoWrite">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">termuxForHexoWrite</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/07/30/setDebianIbus-rime/" title="设置Debian系统的Ibus-rime">
-                        <span class="hidden-mobile">设置Debian系统的Ibus-rime</span>
+                      <a href="/2022/08/01/githubActionDeployHexo/" title="github Action自动化部署hexo博客">
+                        <span class="hidden-mobile">github Action自动化部署hexo博客</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

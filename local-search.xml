@@ -4,6 +4,35 @@
   
   
   <entry>
+    <title>termuxForHexoWrite</title>
+    <link href="/2022/08/02/termuxForHexoWrite/"/>
+    <url>/2022/08/02/termuxForHexoWrite/</url>
+    
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>由于不可抗力因素 使得我有时不能使用电脑<br>于是我想要不用手机搭出一个hexo环境</p><h1 id="解释"><a href="#解释" class="headerlink" title="解释"></a>解释</h1><ol><li>为什么用proot容器 而不是 termux直接运行<br>因为容器能隔离…. 好吧是我当时遇到了bug所以想用容器试<blockquote><p>然后弄着弄着就知道怎么解决了也懒得再试一次</p></blockquote></li><li>在termux下使用什么编写博客呢？<br>本文由于我要学下<em>vim&#x2F;neovim</em>  所以用的neovim编写</li></ol><p>不过如果你不喜欢这样，推荐你使用 <code>termux-setup-storage</code> 将blog目录放置在可访问的储存中 供其他编辑器访问</p><h1 id="配置运行环境"><a href="#配置运行环境" class="headerlink" title="配置运行环境"></a>配置运行环境</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs bash">pkg install proot-distro<br><span class="hljs-comment"># 安装容器</span><br><br>proot-distro install debian<br><span class="hljs-comment"># 选择Debian容器安装</span><br><br>proot-distro login debian<br><span class="hljs-comment">#登入Debian容器</span><br><br>apt update<br><span class="hljs-comment">#更新软件列表</span><br><br>apt install git nodejs yarnpkg neovim<br><span class="hljs-comment">#如果你不需要neovim 可以不安装</span><br></code></pre></td></tr></table></figure><p>这有比较坑的点 </p><ol><li>这个容器nodejs版本低 但达到 hexo推荐的 v12</li><li>它不自带npm 还是怎么的 我去直接懵了 看看node-npm 看看yarnpkg (apt search到的) 选择了yarn 也就是yarnpkg</li></ol><h1 id="git-初始化仓库"><a href="#git-初始化仓库" class="headerlink" title="git 初始化仓库"></a>git 初始化仓库</h1><ol><li>如果你是第一次创建hexo 博客<br>请参看hexo文档 <strong>现在没时间后面再补</strong></li><li>如果你已有仓库在GitHub<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">git config -global user.name <span class="hljs-string">&quot;youname&quot;</span><br>git config -global user.email <span class="hljs-string">&quot;youemail&quot;</span><br><span class="hljs-comment">#将youname换成你想要在提交时的名字 youemail同理</span><br></code></pre></td></tr></table></figure><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ssh-keygen -C <span class="hljs-string">&quot;写入备注&quot;</span><br></code></pre></td></tr></table></figure>此时会让你选择保存路径 就选择默认的目录<br>后面它会让你输入一个密码 这个密码将在你push时需要输入验证不需要就回车省略<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">git <span class="hljs-built_in">clone</span> git@github.com:youname/yourepo.git<br><span class="hljs-comment"># 将 youname 换成 你的名字 yourepo 换成你的仓库名</span><br><br></code></pre></td></tr></table></figure>如果你用的不是这个（ssh）而是http ，那验证的就是账号密码而不是ssh密钥了<br>对了先clone再操作不然你先init后面文件pull不下来改什么东西麻烦死了</li></ol><h1 id="Hexo-使用"><a href="#Hexo-使用" class="headerlink" title="Hexo 使用"></a>Hexo 使用</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> yourepo<br><span class="hljs-comment">#进入你的仓库</span><br><br>yarnpkg <br><span class="hljs-comment">#补全 node_models</span><br><br>yarnpkg hexo <br><span class="hljs-comment">#是否能正常使用 hexo</span><br></code></pre></td></tr></table></figure><h1 id="优化-命令唤出"><a href="#优化-命令唤出" class="headerlink" title="优化 命令唤出"></a>优化 命令唤出</h1><p>在 termux用户目录下（~）编辑.bashrc 加入</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">alias</span> debian=<span class="hljs-string">&#x27;proot-distro login debian&#x27;</span><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>Adroid</category>
+      
+      <category>termux</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>hexo</tag>
+      
+      <tag>termux</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>github Action自动化部署hexo博客</title>
     <link href="/2022/08/01/githubActionDeployHexo/"/>
     <url>/2022/08/01/githubActionDeployHexo/</url>

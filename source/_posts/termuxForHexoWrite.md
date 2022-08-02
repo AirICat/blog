@@ -1,5 +1,5 @@
 ---
-title: termuxForHexoWrite
+title: 利用termux写hexo博客 
 date: 2022-08-02 16:05:51
 tags:
   - hexo

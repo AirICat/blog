@@ -4,11 +4,37 @@
   
   
   <entry>
+    <title>StartUnturned</title>
+    <link href="/2022/09/29/StartUnturned/"/>
+    <url>/2022/09/29/StartUnturned/</url>
+    
+    <content type="html"><![CDATA[<h1 id="需要材料"><a href="#需要材料" class="headerlink" title="需要材料"></a>需要材料</h1><ol><li>正常steam账号</li><li>服务器</li></ol><h1 id="Steamcmd"><a href="#Steamcmd" class="headerlink" title="Steamcmd"></a>Steamcmd</h1><blockquote><p>这是一个steam 命令端 可在linux使用而无需可视化桌面</p></blockquote><p>首先下载 <a href="https://developer.valvesoftware.com/wiki/SteamCMD">SteamCMD</a></p><p>选择对应的服务器系统类型</p><p>解压运行 -&gt; 等待自动更新</p><p>在此目录新建脚本文件 - 建议名字为updata.bat</p><figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs dos">.\steamcmd.exe +force_install_dir ./UDS/ +login anonymous +app_update <span class="hljs-number">1110390</span> validate<br></code></pre></td></tr></table></figure><h2 id="命令解析"><a href="#命令解析" class="headerlink" title="命令解析"></a>命令解析</h2><ol><li>‘.&#x2F;steamcmd.exe’ 为调用的程序</li><li>+login 为登录的用户 anonymous 为无账号登录使用的公共账号</li><li>+force_install_dir 为安装的位置</li><li>+app_update 为更新或者下载的id 未转变者服务器id为 1110390 , validate 为验证下载的文件</li></ol><p>我比较喜欢bash命令所以我用的是</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">winpty ./steamcmd.exe +login anonymous +force_install_dir ./UDS/ +app_update 1110390 validate +quit<br></code></pre></td></tr></table></figure><p>为啥有个winpty<br>因为没有这个对于win命令或交互会无响应，而且加了运行也快了一点</p><h1 id="配置基本信息"><a href="#配置基本信息" class="headerlink" title="配置基本信息"></a>配置基本信息</h1><p>进入steamcmd目录<br>进入uds目录<br>新建LukaServer.bat</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs cmd"><span class="hljs-built_in">start</span> &quot;&quot; &quot;%~dp0ServerHelper.bat&quot; +InternetServer/Luka<br><span class="hljs-keyword">exit</span><br></code></pre></td></tr></table></figure><p>+InternetServer 为互联网模式可换为 +LanServer 局域网模式<br>&#x2F;后面为服务器备注路径名</p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title></title>
+    <link href="/2022/09/29/jixuxiangqian/"/>
+    <url>/2022/09/29/jixuxiangqian/</url>
+    
+    <content type="html"><![CDATA[<h1 id="《光的另一极》"><a href="#《光的另一极》" class="headerlink" title="《光的另一极》"></a>《光的另一极》</h1><p>夕阳等夜色却 瞥见 那片红<br>像是要疯狂也 不敢 去释放<br>便要卷起云海 不想 就此告别<br>夜色苦盼破晓 不见 光明萦绕</p><p>云儿是否懂我意，不再遮掩我的心<br>我在光的另一极，寻找夕阳留的影</p><p>认定前方不回头，远处的光等者我<br>漆黑的夜忘了梦，无声的我错过光</p><p>明明每日<br>苦苦盼着<br>却<br>不敢去触碰</p><p>心有多渴望<br>内心就有多怕<br>多彩的世界<br>是否<br>能的容下 无色 的我</p><p>云儿是否知我意，不再遮掩我的心<br>我在光的另一极，寻找穿越的理由</p><p>抛下所有的自卑，寻找真正的自我<br>云儿不再去掩莫，跟寻着光的足迹<br>岁月迎来破晓的光，于光的另一极绽放自我</p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>我为什么要去学我喜欢的</title>
     <link href="/2022/08/05/whyLearnMyLike/"/>
     <url>/2022/08/05/whyLearnMyLike/</url>
     
-    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>为什么要学习我喜欢的，我想每个时间段都有不同的理由<br>不知道从什么时候开始，我对以后的生活是想着提前结束</p><p>在这样的日子里我很纠结，我渴望解脱但同时也有放不下<br>我想着去为最后的生活填上点彩头，<br>学一些能让我在剩下日子里不再无聊的兴趣</p><p>当我去寻找教程铺天盖地的是费用，我知道我没有那个财力<br>年少嘛，说什么自学也能成材，<br>学了一段时间后急于求成的我，加上那些并不完整，复杂更不系统<br>三分热情，最后是放弃了</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="记录一"><a href="#记录一" class="headerlink" title="记录一"></a>记录一</h1><p>为什么要学习我喜欢的，我想每个时间段都有不同的理由<br>不知道从什么时候开始，我对以后的生活是想着提前结束</p><p>在这样的日子里我很纠结，我渴望解脱但同时也有放不下<br>我想着去为最后的生活填上点彩头，<br>学一些能让我在剩下日子里不再无聊的兴趣</p><p>当我去寻找教程铺天盖地的是费用，我知道我没有那个财力<br>年少嘛，说什么自学也能成材，<br>学了一段时间后急于求成的我，加上那些并不完整，复杂更不系统<br>三分热情，最后是放弃了</p><p>现在嘛，一是感觉没什么精神学 二是感觉时间不够用，<code>对，没什么时间虽然每天都在玩</code></p>]]></content>
     
     
     

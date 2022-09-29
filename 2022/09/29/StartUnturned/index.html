@@ -18,25 +18,23 @@
   <meta name="author" content="AirICat">
   <meta name="keywords" content="">
   
-    <meta name="description" content="前言由于不可抗力因素 使得我有时不能使用电脑于是我想要不用手机搭出一个hexo环境 解释 为什么用proot容器 而不是 termux直接运行因为容器能隔离…. 好吧是我当时遇到了bug所以想用容器试 然后弄着弄着就知道怎么解决了也懒得再试一次   在termux下使用什么编写博客呢？本文由于我要学下vim&#x2F;neovim  所以用的neovim编写  不过如果你不喜欢这样，推荐你使用 t">
+    <meta name="description" content="需要材料 正常steam账号 服务器  Steamcmd 这是一个steam 命令端 可在linux使用而无需可视化桌面  首先下载 SteamCMD 选择对应的服务器系统类型 解压运行 -&gt; 等待自动更新 在此目录新建脚本文件 - 建议名字为updata.bat 1.\steamcmd.exe +force_install_dir .&#x2F;UDS&#x2F; +login anonymous +app_">
 <meta property="og:type" content="article">
-<meta property="og:title" content="利用termux写hexo博客">
-<meta property="og:url" content="https://blog.ltfy.top/2022/08/02/termuxForHexoWrite/index.html">
+<meta property="og:title" content="StartUnturned">
+<meta property="og:url" content="https://blog.ltfy.top/2022/09/29/StartUnturned/index.html">
 <meta property="og:site_name" content="烛梦小屋">
-<meta property="og:description" content="前言由于不可抗力因素 使得我有时不能使用电脑于是我想要不用手机搭出一个hexo环境 解释 为什么用proot容器 而不是 termux直接运行因为容器能隔离…. 好吧是我当时遇到了bug所以想用容器试 然后弄着弄着就知道怎么解决了也懒得再试一次   在termux下使用什么编写博客呢？本文由于我要学下vim&#x2F;neovim  所以用的neovim编写  不过如果你不喜欢这样，推荐你使用 t">
+<meta property="og:description" content="需要材料 正常steam账号 服务器  Steamcmd 这是一个steam 命令端 可在linux使用而无需可视化桌面  首先下载 SteamCMD 选择对应的服务器系统类型 解压运行 -&gt; 等待自动更新 在此目录新建脚本文件 - 建议名字为updata.bat 1.\steamcmd.exe +force_install_dir .&#x2F;UDS&#x2F; +login anonymous +app_">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-08-02T16:05:51.000Z">
+<meta property="article:published_time" content="2022-09-29T19:28:34.000Z">
 <meta property="article:modified_time" content="2022-09-29T13:47:52.102Z">
 <meta property="article:author" content="AirICat">
-<meta property="article:tag" content="hexo">
-<meta property="article:tag" content="termux">
 <meta name="twitter:card" content="summary_large_image">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>利用termux写hexo博客 - 烛梦小屋</title>
+  <title>StartUnturned - 烛梦小屋</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -201,7 +199,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="利用termux写hexo博客"></span>
+            <span id="subtitle" data-typed-text="StartUnturned"></span>
           
         </div>
 
@@ -217,8 +215,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-08-02 16:05" pubdate>
-          2022年8月2日 下午
+        <time datetime="2022-09-29 19:28" pubdate>
+          2022年9月29日 晚上
         </time>
       </span>
     
@@ -229,7 +227,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.1k 字
+          665 字
         
       </span>
     
@@ -240,7 +238,7 @@
         
         
         
-          10 分钟
+          6 分钟
         
       </span>
     
@@ -286,7 +284,7 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">利用termux写hexo博客</h1>
+            <h1 style="display: none">StartUnturned</h1>
             
               <p class="note note-info">
                 
@@ -299,33 +297,32 @@
             
               <div class="markdown-body">
                 
-                <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>由于不可抗力因素 使得我有时不能使用电脑<br>于是我想要不用手机搭出一个hexo环境</p>
-<h1 id="解释"><a href="#解释" class="headerlink" title="解释"></a>解释</h1><ol>
-<li>为什么用proot容器 而不是 termux直接运行<br>因为容器能隔离…. 好吧是我当时遇到了bug所以想用容器试<blockquote>
-<p>然后弄着弄着就知道怎么解决了也懒得再试一次</p>
+                <h1 id="需要材料"><a href="#需要材料" class="headerlink" title="需要材料"></a>需要材料</h1><ol>
+<li>正常steam账号</li>
+<li>服务器</li>
+</ol>
+<h1 id="Steamcmd"><a href="#Steamcmd" class="headerlink" title="Steamcmd"></a>Steamcmd</h1><blockquote>
+<p>这是一个steam 命令端 可在linux使用而无需可视化桌面</p>
 </blockquote>
-</li>
-<li>在termux下使用什么编写博客呢？<br>本文由于我要学下<em>vim&#x2F;neovim</em>  所以用的neovim编写</li>
-</ol>
-<p>不过如果你不喜欢这样，推荐你使用 <code>termux-setup-storage</code> 将blog目录放置在可访问的储存中 供其他编辑器访问</p>
-<h1 id="配置运行环境"><a href="#配置运行环境" class="headerlink" title="配置运行环境"></a>配置运行环境</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs bash">pkg install proot-distro<br><span class="hljs-comment"># 安装容器</span><br><br>proot-distro install debian<br><span class="hljs-comment"># 选择Debian容器安装</span><br><br>proot-distro login debian<br><span class="hljs-comment">#登入Debian容器</span><br><br>apt update<br><span class="hljs-comment">#更新软件列表</span><br><br>apt install git nodejs yarnpkg neovim<br><span class="hljs-comment">#如果你不需要neovim 可以不安装</span><br></code></pre></td></tr></table></figure>
+<p>首先下载 <a target="_blank" rel="noopener" href="https://developer.valvesoftware.com/wiki/SteamCMD">SteamCMD</a></p>
+<p>选择对应的服务器系统类型</p>
+<p>解压运行 -&gt; 等待自动更新</p>
+<p>在此目录新建脚本文件 - 建议名字为updata.bat</p>
+<figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs dos">.\steamcmd.exe +force_install_dir ./UDS/ +login anonymous +app_update <span class="hljs-number">1110390</span> validate<br></code></pre></td></tr></table></figure>
 
-<p>这有比较坑的点 </p>
-<ol>
-<li>这个容器nodejs版本低 但达到 hexo推荐的 v12</li>
-<li>它不自带npm 还是怎么的 我去直接懵了 看看node-npm 看看yarnpkg (apt search到的) 选择了yarn 也就是yarnpkg</li>
+<h2 id="命令解析"><a href="#命令解析" class="headerlink" title="命令解析"></a>命令解析</h2><ol>
+<li>‘.&#x2F;steamcmd.exe’ 为调用的程序</li>
+<li>+login 为登录的用户 anonymous 为无账号登录使用的公共账号</li>
+<li>+force_install_dir 为安装的位置</li>
+<li>+app_update 为更新或者下载的id 未转变者服务器id为 1110390 , validate 为验证下载的文件</li>
 </ol>
-<h1 id="git-初始化仓库"><a href="#git-初始化仓库" class="headerlink" title="git 初始化仓库"></a>git 初始化仓库</h1><ol>
-<li>如果你是第一次创建hexo 博客<br>请参看hexo文档 <strong>现在没时间后面再补</strong></li>
-<li>如果你已有仓库在GitHub<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">git config -global user.name <span class="hljs-string">&quot;youname&quot;</span><br>git config -global user.email <span class="hljs-string">&quot;youemail&quot;</span><br><span class="hljs-comment">#将youname换成你想要在提交时的名字 youemail同理</span><br></code></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ssh-keygen -C <span class="hljs-string">&quot;写入备注&quot;</span><br></code></pre></td></tr></table></figure>
-此时会让你选择保存路径 就选择默认的目录<br>后面它会让你输入一个密码 这个密码将在你push时需要输入验证不需要就回车省略<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">git <span class="hljs-built_in">clone</span> git@github.com:youname/yourepo.git<br><span class="hljs-comment"># 将 youname 换成 你的名字 yourepo 换成你的仓库名</span><br><br></code></pre></td></tr></table></figure>
-如果你用的不是这个（ssh）而是http ，那验证的就是账号密码而不是ssh密钥了<br>对了先clone再操作不然你先init后面文件pull不下来改什么东西麻烦死了</li>
-</ol>
-<h1 id="Hexo-使用"><a href="#Hexo-使用" class="headerlink" title="Hexo 使用"></a>Hexo 使用</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> yourepo<br><span class="hljs-comment">#进入你的仓库</span><br><br>yarnpkg <br><span class="hljs-comment">#补全 node_models</span><br><br>yarnpkg hexo <br><span class="hljs-comment">#是否能正常使用 hexo</span><br></code></pre></td></tr></table></figure>
+<p>我比较喜欢bash命令所以我用的是</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">winpty ./steamcmd.exe +login anonymous +force_install_dir ./UDS/ +app_update 1110390 validate +quit<br></code></pre></td></tr></table></figure>
 
-<h1 id="优化-命令唤出"><a href="#优化-命令唤出" class="headerlink" title="优化 命令唤出"></a>优化 命令唤出</h1><p>在 termux用户目录下（~）编辑.bashrc 加入</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">alias</span> debian=<span class="hljs-string">&#x27;proot-distro login debian&#x27;</span><br></code></pre></td></tr></table></figure>
+<p>为啥有个winpty<br>因为没有这个对于win命令或交互会无响应，而且加了运行也快了一点</p>
+<h1 id="配置基本信息"><a href="#配置基本信息" class="headerlink" title="配置基本信息"></a>配置基本信息</h1><p>进入steamcmd目录<br>进入uds目录<br>新建LukaServer.bat</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs cmd"><span class="hljs-built_in">start</span> &quot;&quot; &quot;%~dp0ServerHelper.bat&quot; +InternetServer/Luka<br><span class="hljs-keyword">exit</span><br></code></pre></td></tr></table></figure>
+<p>+InternetServer 为互联网模式可换为 +LanServer 局域网模式<br>&#x2F;后面为服务器备注路径名</p>
 
                 
               </div>
@@ -334,43 +331,6 @@
             <div>
               <div class="post-metas my-3">
   
-    <div class="post-meta mr-3 d-flex align-items-center">
-      <i class="iconfont icon-category"></i>
-      
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/Adroid/" class="category-chain-item">Adroid</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/Adroid/termux/" class="category-chain-item">termux</a>
-  
-  
-
-  
-
-      </span>
-    
-  
-</span>
-
-    </div>
-  
-  
-    <div class="post-meta">
-      <i class="iconfont icon-tags"></i>
-      
-        <a href="/tags/hexo/">#hexo</a>
-      
-        <a href="/tags/termux/">#termux</a>
-      
-    </div>
   
 </div>
 
@@ -380,8 +340,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>利用termux写hexo博客</div>
-      <div>https://blog.ltfy.top/2022/08/02/termuxForHexoWrite/</div>
+      <div>StartUnturned</div>
+      <div>https://blog.ltfy.top/2022/09/29/StartUnturned/</div>
     </div>
     <div class="license-meta">
       
@@ -393,7 +353,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年8月2日</div>
+          <div>2022年9月29日</div>
         </div>
       
       
@@ -423,18 +383,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/08/05/whyLearnMyLike/" title="我为什么要去学我喜欢的">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">我为什么要去学我喜欢的</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/08/01/githubActionDeployHexo/" title="github Action自动化部署hexo博客">
-                        <span class="hidden-mobile">github Action自动化部署hexo博客</span>
+                      <a href="/2022/09/29/jixuxiangqian/" title="">
+                        <span class="hidden-mobile"></span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

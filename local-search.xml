@@ -4,11 +4,38 @@
   
   
   <entry>
-    <title>StartUnturned</title>
-    <link href="/2022/09/29/StartUnturned/"/>
-    <url>/2022/09/29/StartUnturned/</url>
+    <title>未转变者维护参考</title>
+    <link href="/2022/09/30/UnturnedMaintain/"/>
+    <url>/2022/09/30/UnturnedMaintain/</url>
     
-    <content type="html"><![CDATA[<h1 id="需要材料"><a href="#需要材料" class="headerlink" title="需要材料"></a>需要材料</h1><ol><li>正常steam账号</li><li>服务器</li></ol><h1 id="Steamcmd"><a href="#Steamcmd" class="headerlink" title="Steamcmd"></a>Steamcmd</h1><blockquote><p>这是一个steam 命令端 可在linux使用而无需可视化桌面</p></blockquote><p>首先下载 <a href="https://developer.valvesoftware.com/wiki/SteamCMD">SteamCMD</a></p><p>选择对应的服务器系统类型</p><p>解压运行 -&gt; 等待自动更新</p><p>在此目录新建脚本文件 - 建议名字为updata.bat</p><figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs dos">.\steamcmd.exe +force_install_dir ./UDS/ +login anonymous +app_update <span class="hljs-number">1110390</span> validate<br></code></pre></td></tr></table></figure><h2 id="命令解析"><a href="#命令解析" class="headerlink" title="命令解析"></a>命令解析</h2><ol><li>‘.&#x2F;steamcmd.exe’ 为调用的程序</li><li>+login 为登录的用户 anonymous 为无账号登录使用的公共账号</li><li>+force_install_dir 为安装的位置</li><li>+app_update 为更新或者下载的id 未转变者服务器id为 1110390 , validate 为验证下载的文件</li></ol><p>我比较喜欢bash命令所以我用的是</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">winpty ./steamcmd.exe +login anonymous +force_install_dir ./UDS/ +app_update 1110390 validate +quit<br></code></pre></td></tr></table></figure><p>为啥有个winpty<br>因为没有这个对于win命令或交互会无响应，而且加了运行也快了一点</p><h1 id="配置基本信息"><a href="#配置基本信息" class="headerlink" title="配置基本信息"></a>配置基本信息</h1><p>进入steamcmd目录<br>进入uds目录<br>新建LukaServer.bat</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs cmd"><span class="hljs-built_in">start</span> &quot;&quot; &quot;%~dp0ServerHelper.bat&quot; +InternetServer/Luka<br><span class="hljs-keyword">exit</span><br></code></pre></td></tr></table></figure><p>+InternetServer 为互联网模式可换为 +LanServer 局域网模式<br>&#x2F;后面为服务器备注路径名</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h1><ol><li>根目录 一般为未转变者根目录</li><li>服务器目录 一般为根目录 Servers&#x2F;服务器 目录</li><li></li></ol><h1 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h1><ol><li>command.dat</li><li>config.json</li><li>plugins</li></ol><h1 id="command-dat"><a href="#command-dat" class="headerlink" title="command.dat"></a>command.dat</h1><p>位于服务器目录 &#x2F;server&#x2F;command.dat<br>此文件为<strong>配置基础信息</strong></p><h2 id="值解析"><a href="#值解析" class="headerlink" title="值解析"></a>值解析</h2><ol><li><p>Name<br>为服务器名字 最少5个字符，最多(好像是11)</p></li><li><p>Map<br> 此为选择的地图 可在根目录 Maps 寻找名字</p></li><li><p>Welcome<br> 玩家进入的欢迎语</p></li><li><p>Maxplayers<br> 最大玩家在线 原版最多为24</p></li><li><p>Port<br> 为服务器进入端口 默认27015</p><blockquote><p>需要保证此端口+1也可以被联通 此为steam通信端口(好像是这样的)</p></blockquote></li><li><p>PVP 或 PVE</p></li><li><p>Mode<br>Easy |  Normal   |  Hard<br> 为服务器显示难度</p><blockquote><p>为什么是显示难度，因为可在config.json改难度的内容，所以你可以把简单调成困难的内容</p></blockquote></li><li><p>loadout<br>255&#x2F;id&#x2F;id&#x2F;id<br>出生装备 前面的255不能省</p></li><li><p>Owner<br> Steam64位ID<br> 服主指定</p></li><li><p>perspective<br>first | third | both | vehicle<br>视角允许</p></li><li><p>chatrate<br>聊天时间 间隔数 单位s </p></li><li><p>bind<br>ip<br>绑定服务器ip</p></li></ol><h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs text">Name Light_city<br>Port 27015<br>Maxplayers 24<br>Map Russia<br>Mode Normal<br>Perspective Both<br></code></pre></td></tr></table></figure><h1 id="config-json"><a href="#config-json" class="headerlink" title="config.json"></a>config.json</h1><p>位于根目录 config.json</p><h2 id="GLST"><a href="#GLST" class="headerlink" title="GLST"></a>GLST</h2><p>在现在的版本，要能在官方服务器搜索列表显示，必须要有GLST<br>GLST 关联账号与服务器的密钥<br>在 <a href="https://steamcommunity.com/dev/managegameservers">GLST</a><br>查看对账号的需求<br>看下方的创建<br>游戏id为 <strong>304930</strong><br>复制对应的登录令牌到 config.json 的 Login_Token 中</p><h2 id="Browser"><a href="#Browser" class="headerlink" title="Browser"></a>Browser</h2><h1 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h1><p><a href="https://www.unbbs.net/258.html">傻瓜式架设专用服 | 开服教程</a><br><a href="https://www.unbbs.net/1587.html">服务器显示在|互联网|列表</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>GameServer</category>
+      
+      <category>Unturned</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>GameServerMaintain</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title></title>
+    <link href="/2022/09/30/jixuxiangqian/"/>
+    <url>/2022/09/30/jixuxiangqian/</url>
+    
+    <content type="html"><![CDATA[<h1 id="《光的另一极》"><a href="#《光的另一极》" class="headerlink" title="《光的另一极》"></a>《光的另一极》</h1><p>夕阳等夜色却 瞥见 那片红<br>像是要疯狂也 不敢 去释放<br>便要卷起云海 不想 就此告别<br>夜色苦盼破晓 不见 光明萦绕</p><p>云儿是否懂我意，不再遮掩我的心<br>我在光的另一极，寻找夕阳留的影</p><p>认定前方不回头，远处的光等者我<br>漆黑的夜忘了梦，无声的我错过光</p><p>明明每日<br>苦苦盼着<br>却<br>不敢去触碰</p><p>心有多渴望<br>内心就有多怕<br>多彩的世界<br>是否<br>能的容下 无色 的我</p><p>云儿是否知我意，不再遮掩我的心<br>我在光的另一极，寻找穿越的理由</p><p>抛下所有的自卑，寻找真正的自我<br>云儿不再去掩莫，跟寻着光的足迹<br>岁月迎来破晓的光，于光的另一极绽放自我</p>]]></content>
     
     
     
@@ -17,13 +44,27 @@
   
   
   <entry>
-    <title></title>
-    <link href="/2022/09/29/jixuxiangqian/"/>
-    <url>/2022/09/29/jixuxiangqian/</url>
+    <title>未转变者服务器初始化</title>
+    <link href="/2022/09/29/StartUnturned/"/>
+    <url>/2022/09/29/StartUnturned/</url>
     
-    <content type="html"><![CDATA[<h1 id="《光的另一极》"><a href="#《光的另一极》" class="headerlink" title="《光的另一极》"></a>《光的另一极》</h1><p>夕阳等夜色却 瞥见 那片红<br>像是要疯狂也 不敢 去释放<br>便要卷起云海 不想 就此告别<br>夜色苦盼破晓 不见 光明萦绕</p><p>云儿是否懂我意，不再遮掩我的心<br>我在光的另一极，寻找夕阳留的影</p><p>认定前方不回头，远处的光等者我<br>漆黑的夜忘了梦，无声的我错过光</p><p>明明每日<br>苦苦盼着<br>却<br>不敢去触碰</p><p>心有多渴望<br>内心就有多怕<br>多彩的世界<br>是否<br>能的容下 无色 的我</p><p>云儿是否知我意，不再遮掩我的心<br>我在光的另一极，寻找穿越的理由</p><p>抛下所有的自卑，寻找真正的自我<br>云儿不再去掩莫，跟寻着光的足迹<br>岁月迎来破晓的光，于光的另一极绽放自我</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="需要材料"><a href="#需要材料" class="headerlink" title="需要材料"></a>需要材料</h1><ol><li>正常steam账号</li><li>服务器</li></ol><h1 id="Steamcmd"><a href="#Steamcmd" class="headerlink" title="Steamcmd"></a>Steamcmd</h1><blockquote><p>这是一个steam 命令端 可在linux使用而无需可视化桌面</p></blockquote><p>首先下载 <a href="https://developer.valvesoftware.com/wiki/SteamCMD">SteamCMD</a></p><p>选择对应的服务器系统类型</p><p>解压运行 -&gt; 等待自动更新</p><p>在此目录新建脚本文件 - 建议名字为updata.bat</p><figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs dos">.\steamcmd.exe +force_install_dir ./UDS/ +login anonymous +app_update <span class="hljs-number">1110390</span> validate<br></code></pre></td></tr></table></figure><h2 id="命令解析"><a href="#命令解析" class="headerlink" title="命令解析"></a>命令解析</h2><ol><li>‘.&#x2F;steamcmd.exe’ 为调用的程序</li><li>+login 为登录的用户 anonymous 为无账号登录使用的公共账号</li><li>+force_install_dir 为安装的位置</li><li>+app_update 为更新或者下载的id 未转变者服务器id为 1110390 , validate 为验证下载的文件</li></ol><p>我比较喜欢bash命令所以我用的是</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">winpty ./steamcmd.exe +login anonymous +force_install_dir ./UDS/ +app_update 1110390 validate +quit<br></code></pre></td></tr></table></figure><p>为啥有个winpty<br>因为没有这个对于win命令或交互会无响应，而且加了运行也快了一点</p><h1 id="新建开服信息"><a href="#新建开服信息" class="headerlink" title="新建开服信息"></a>新建开服信息</h1><p>进入steamcmd目录<br>进入uds目录<br>新建LukaServer.bat</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs cmd"><span class="hljs-built_in">start</span> &quot;&quot; &quot;%~dp0ServerHelper.bat&quot; +InternetServer/Luka<br><span class="hljs-keyword">exit</span><br></code></pre></td></tr></table></figure><p>+InternetServer 为互联网模式可换为 +LanServer 局域网模式<br>&#x2F;后面为服务器备注路径名</p><h1 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h1><p><a href="https://www.unbbs.net/258.html">傻瓜式架设专用服 | 开服教程</a><br><a href="https://developer.valvesoftware.com/wiki/SteamCMD:zh-cn#.E5.8C.BF.E5.90.8D.E7.99.BB.E5.BD.95">steamCMD</a></p>]]></content>
     
     
+    <categories>
+      
+      <category>GameServer</category>
+      
+      <category>Unturned</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>GameServer</tag>
+      
+    </tags>
     
   </entry>
   

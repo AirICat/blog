@@ -18,23 +18,24 @@
   <meta name="author" content="Luka">
   <meta name="keywords" content="">
   
-    <meta name="description" content="记录一为什么要学习我喜欢的，我想每个时间段都有不同的理由不知道从什么时候开始，我对以后的生活是想着提前结束 在这样的日子里我很纠结，我渴望解脱但同时也有放不下我想着去为最后的生活填上点彩头，学一些能让我在剩下日子里不再无聊的兴趣 当我去寻找教程铺天盖地的是费用，我知道我没有那个财力年少嘛，说什么自学也能成材，学了一段时间后急于求成的我，加上那些并不完整，复杂更不系统三分热情，最后是放弃了 现在嘛，">
+    <meta name="description" content="Windows Server在开始 -&gt; 管理工具 -&gt; 打开 任务计划程序或者 cmd 里输入 入taskschd.msc 注意事项 如果你是远程连接 需要将使用的账号设置为 User因为断开连接时，使用默认的账号就不会运行，而你系统在运行基本上会有User有的说弄SYSTEM 不过我试了没用  再设置任务时要注意 运行目录 和参数尤其是对只有相对路径的bash，bat脚本   li">
 <meta property="og:type" content="article">
-<meta property="og:title" content="我为什么要去学我喜欢的">
-<meta property="og:url" content="https://blog.ltfy.top/2022/08/05/whyLearnMyLike/index.html">
+<meta property="og:title" content="定时任务">
+<meta property="og:url" content="https://blog.ltfy.top/2022/10/02/ScheduledTasks/index.html">
 <meta property="og:site_name" content="烛昔小屋">
-<meta property="og:description" content="记录一为什么要学习我喜欢的，我想每个时间段都有不同的理由不知道从什么时候开始，我对以后的生活是想着提前结束 在这样的日子里我很纠结，我渴望解脱但同时也有放不下我想着去为最后的生活填上点彩头，学一些能让我在剩下日子里不再无聊的兴趣 当我去寻找教程铺天盖地的是费用，我知道我没有那个财力年少嘛，说什么自学也能成材，学了一段时间后急于求成的我，加上那些并不完整，复杂更不系统三分热情，最后是放弃了 现在嘛，">
+<meta property="og:description" content="Windows Server在开始 -&gt; 管理工具 -&gt; 打开 任务计划程序或者 cmd 里输入 入taskschd.msc 注意事项 如果你是远程连接 需要将使用的账号设置为 User因为断开连接时，使用默认的账号就不会运行，而你系统在运行基本上会有User有的说弄SYSTEM 不过我试了没用  再设置任务时要注意 运行目录 和参数尤其是对只有相对路径的bash，bat脚本   li">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-08-05T16:16:26.000Z">
-<meta property="article:modified_time" content="2022-10-02T14:05:22.634Z">
+<meta property="article:published_time" content="2022-10-02T21:06:01.000Z">
+<meta property="article:modified_time" content="2022-10-02T14:05:22.630Z">
 <meta property="article:author" content="Luka">
+<meta property="article:tag" content="tools">
 <meta name="twitter:card" content="summary_large_image">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>我为什么要去学我喜欢的 - 烛昔小屋</title>
+  <title>定时任务 - 烛昔小屋</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -199,7 +200,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="我为什么要去学我喜欢的"></span>
+            <span id="subtitle" data-typed-text="定时任务"></span>
           
         </div>
 
@@ -215,8 +216,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-08-05 16:16" pubdate>
-          2022年8月5日 下午
+        <time datetime="2022-10-02 21:06" pubdate>
+          2022年10月2日 晚上
         </time>
       </span>
     
@@ -227,7 +228,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          231 字
+          198 字
         
       </span>
     
@@ -284,7 +285,7 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">我为什么要去学我喜欢的</h1>
+            <h1 style="display: none">定时任务</h1>
             
               <p class="note note-info">
                 
@@ -297,10 +298,14 @@
             
               <div class="markdown-body">
                 
-                <h1 id="记录一"><a href="#记录一" class="headerlink" title="记录一"></a>记录一</h1><p>为什么要学习我喜欢的，我想每个时间段都有不同的理由<br>不知道从什么时候开始，我对以后的生活是想着提前结束</p>
-<p>在这样的日子里我很纠结，我渴望解脱但同时也有放不下<br>我想着去为最后的生活填上点彩头，<br>学一些能让我在剩下日子里不再无聊的兴趣</p>
-<p>当我去寻找教程铺天盖地的是费用，我知道我没有那个财力<br>年少嘛，说什么自学也能成材，<br>学了一段时间后急于求成的我，加上那些并不完整，复杂更不系统<br>三分热情，最后是放弃了</p>
-<p>现在嘛，一是感觉没什么精神学 二是感觉时间不够用，<code>对，没什么时间虽然每天都在玩</code></p>
+                <h1 id="Windows-Server"><a href="#Windows-Server" class="headerlink" title="Windows Server"></a>Windows Server</h1><p>在开始 -&gt; 管理工具 -&gt; 打开 任务计划程序<br>或者 cmd 里输入 入<code>taskschd.msc</code></p>
+<h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><ol>
+<li><p>如果你是远程连接 需要将使用的账号设置为 User<br>因为断开连接时，使用默认的账号就不会运行，而你系统在运行基本上会有User<br>有的说弄SYSTEM 不过我试了没用</p>
+</li>
+<li><p>再设置任务时要注意 运行目录 和参数尤其是对只有相对路径的bash，bat脚本</p>
+</li>
+</ol>
+<h1 id="linux"><a href="#linux" class="headerlink" title="linux"></a>linux</h1><p>由于暂时没有用Linux先不云了</p>
 
                 
               </div>
@@ -309,6 +314,41 @@
             <div>
               <div class="post-metas my-3">
   
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/system/" class="category-chain-item">system</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/system/tools/" class="category-chain-item">tools</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/tools/">#tools</a>
+      
+    </div>
   
 </div>
 
@@ -318,8 +358,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>我为什么要去学我喜欢的</div>
-      <div>https://blog.ltfy.top/2022/08/05/whyLearnMyLike/</div>
+      <div>定时任务</div>
+      <div>https://blog.ltfy.top/2022/10/02/ScheduledTasks/</div>
     </div>
     <div class="license-meta">
       
@@ -331,7 +371,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年8月5日</div>
+          <div>2022年10月2日</div>
         </div>
       
       
@@ -361,9 +401,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/09/29/StartUnturned/" title="未转变者服务器初始化">
+                      <a href="/2022/10/02/UnturnedMaintain2/" title="未转变者维护插件配置">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">未转变者服务器初始化</span>
+                        <span class="hidden-mobile">未转变者维护插件配置</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -371,8 +411,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/08/02/termuxForHexoWrite/" title="利用termux写hexo博客">
-                        <span class="hidden-mobile">利用termux写hexo博客</span>
+                      <a href="/2022/10/02/jixuxiangqian/" title="">
+                        <span class="hidden-mobile"></span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

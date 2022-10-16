@@ -18,24 +18,24 @@
   <meta name="author" content="Luka">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Windows Server在开始 -&gt; 管理工具 -&gt; 打开 任务计划程序或者 cmd 里输入 入taskschd.msc 注意事项 如果你是远程连接 需要将使用的账号设置为 User因为断开连接时，使用默认的账号就不会运行，而你系统在运行基本上会有User有的说弄SYSTEM 不过我试了没用  再设置任务时要注意 运行目录 和参数尤其是对只有相对路径的bash，bat脚本   li">
+    <meta name="description" content="维护的服务器信息 如果有些错误无法解决可能我们的配置不一致  系统 win2016脚本语言 bash,bat   bash 由git驱动  服务器无法进入 （无法连接steam） 对于国内服务器，steam服务属于半屏蔽状态，所以使用一个合理的加速很重要  对于这个问题感谢某律云的站长，提示我使用steam302，这边也感谢steam302提供的服务  steam302  由于 服务器的 端口+1">
 <meta property="og:type" content="article">
-<meta property="og:title" content="定时任务">
-<meta property="og:url" content="https://blog.ltfy.top/2022/10/02/ScheduledTasks/index.html">
+<meta property="og:title" content="未转变者常见问题解决方案">
+<meta property="og:url" content="https://blog.ltfy.top/post/UnturnedMaintain1/index.html">
 <meta property="og:site_name" content="烛昔小屋">
-<meta property="og:description" content="Windows Server在开始 -&gt; 管理工具 -&gt; 打开 任务计划程序或者 cmd 里输入 入taskschd.msc 注意事项 如果你是远程连接 需要将使用的账号设置为 User因为断开连接时，使用默认的账号就不会运行，而你系统在运行基本上会有User有的说弄SYSTEM 不过我试了没用  再设置任务时要注意 运行目录 和参数尤其是对只有相对路径的bash，bat脚本   li">
+<meta property="og:description" content="维护的服务器信息 如果有些错误无法解决可能我们的配置不一致  系统 win2016脚本语言 bash,bat   bash 由git驱动  服务器无法进入 （无法连接steam） 对于国内服务器，steam服务属于半屏蔽状态，所以使用一个合理的加速很重要  对于这个问题感谢某律云的站长，提示我使用steam302，这边也感谢steam302提供的服务  steam302  由于 服务器的 端口+1">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-10-02T21:06:01.000Z">
-<meta property="article:modified_time" content="2022-10-03T03:13:29.460Z">
+<meta property="article:published_time" content="2022-10-01T20:12:14.000Z">
+<meta property="article:modified_time" content="2022-10-16T06:58:03.217Z">
 <meta property="article:author" content="Luka">
-<meta property="article:tag" content="tools">
+<meta property="article:tag" content="GameServerMaintain">
 <meta name="twitter:card" content="summary_large_image">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>定时任务 - 烛昔小屋</title>
+  <title>未转变者常见问题解决方案 - 烛昔小屋</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -200,7 +200,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="定时任务"></span>
+            <span id="subtitle" data-typed-text="未转变者常见问题解决方案"></span>
           
         </div>
 
@@ -216,8 +216,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-10-02 21:06" pubdate>
-          2022年10月2日 晚上
+        <time datetime="2022-10-01 20:12" pubdate>
+          2022年10月1日 晚上
         </time>
       </span>
     
@@ -228,7 +228,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          198 字
+          378 字
         
       </span>
     
@@ -239,7 +239,7 @@
         
         
         
-          2 分钟
+          4 分钟
         
       </span>
     
@@ -285,12 +285,12 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">定时任务</h1>
+            <h1 style="display: none">未转变者常见问题解决方案</h1>
             
               <p class="note note-info">
                 
                   
-                    本文最后更新于：2022年10月3日 凌晨
+                    本文最后更新于：2022年10月16日 早上
                   
                 
               </p>
@@ -298,14 +298,31 @@
             
               <div class="markdown-body">
                 
-                <h1 id="Windows-Server"><a href="#Windows-Server" class="headerlink" title="Windows Server"></a>Windows Server</h1><p>在开始 -&gt; 管理工具 -&gt; 打开 任务计划程序<br>或者 cmd 里输入 入<code>taskschd.msc</code></p>
-<h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><ol>
-<li><p>如果你是远程连接 需要将使用的账号设置为 User<br>因为断开连接时，使用默认的账号就不会运行，而你系统在运行基本上会有User<br>有的说弄SYSTEM 不过我试了没用</p>
+                <h1 id="维护的服务器信息"><a href="#维护的服务器信息" class="headerlink" title="维护的服务器信息"></a>维护的服务器信息</h1><blockquote>
+<p>如果有些错误无法解决可能我们的配置不一致</p>
+</blockquote>
+<p>系统 <code>win2016</code><br>脚本语言 <code>bash,bat</code> </p>
+<blockquote>
+<p>bash 由git驱动</p>
+</blockquote>
+<h1 id="服务器无法进入-（无法连接steam）"><a href="#服务器无法进入-（无法连接steam）" class="headerlink" title="服务器无法进入 （无法连接steam）"></a>服务器无法进入 （无法连接steam）</h1><ol>
+<li><p>对于国内服务器，steam服务属于半屏蔽状态，所以使用一个合理的加速很重要<br>  对于这个问题感谢某律云的站长，提示我使用steam302，这边也感谢steam302提供的服务<br>  <a target="_blank" rel="noopener" href="https://www.dogfight360.com/blog/686/">steam302</a></p>
 </li>
-<li><p>再设置任务时要注意 运行目录 和参数尤其是对只有相对路径的bash，bat脚本</p>
+<li><p>由于 服务器的 端口+1和端口+2也被使用</p>
+<blockquote>
+<p>所以保证这些端口也能对外访问</p>
+</blockquote>
+</li>
+<li><p>由于steam 在国内属于半屏蔽状态 所以一个好的dns很重要<br> 我使用的是 144.144.144.144 <del>虽然说是电信的，但好像没啥问题</del></p>
+</li>
+<li><p>由于 系统 win2016 cmd听说有bug 所以我使用的bash唤醒</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">winpty ./SevrerHelper.bat +InternetServer/Luka<br></code></pre></td></tr></table></figure>
+<p>这条不重要</p>
 </li>
 </ol>
-<h1 id="linux"><a href="#linux" class="headerlink" title="linux"></a>linux</h1><p>由于暂时没有用Linux先不云了</p>
+<h1 id="更多"><a href="#更多" class="headerlink" title="更多"></a>更多</h1><a href="/post/StartUnturned/" title="未转变者服务器初始化">未转变者服务器初始化</a>
+<a href="/post/UnturnedMaintain/" title="未转变者维护配置">未转变者维护配置</a>
+<a href="/post/UnturnedMaintain2/" title="未转变者维护插件配置">未转变者维护插件配置</a>
 
                 
               </div>
@@ -324,12 +341,12 @@
     
       <span class="category-chain">
         
-  <a href="/categories/system/" class="category-chain-item">system</a>
+  <a href="/categories/GameServer/" class="category-chain-item">GameServer</a>
   
   
     <span>></span>
     
-  <a href="/categories/system/tools/" class="category-chain-item">tools</a>
+  <a href="/categories/GameServer/Unturned/" class="category-chain-item">Unturned</a>
   
   
 
@@ -346,7 +363,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/tools/">#tools</a>
+        <a href="/tags/GameServerMaintain/">#GameServerMaintain</a>
       
     </div>
   
@@ -358,8 +375,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>定时任务</div>
-      <div>https://blog.ltfy.top/2022/10/02/ScheduledTasks/</div>
+      <div>未转变者常见问题解决方案</div>
+      <div>https://blog.ltfy.top/post/UnturnedMaintain1/</div>
     </div>
     <div class="license-meta">
       
@@ -371,7 +388,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年10月2日</div>
+          <div>2022年10月1日</div>
         </div>
       
       
@@ -401,9 +418,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/10/02/UnturnedMaintain2/" title="未转变者维护插件配置">
+                      <a href="/post/ScheduledTasks/" title="定时任务">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">未转变者维护插件配置</span>
+                        <span class="hidden-mobile">定时任务</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -411,8 +428,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/10/01/UnturnedMaintain1/" title="未转变者常见问题解决方案">
-                        <span class="hidden-mobile">未转变者常见问题解决方案</span>
+                      <a href="/post/UnturnedMaintain/" title="未转变者维护配置">
+                        <span class="hidden-mobile">未转变者维护配置</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

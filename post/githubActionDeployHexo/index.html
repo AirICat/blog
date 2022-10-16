@@ -18,23 +18,26 @@
   <meta name="author" content="Luka">
   <meta name="keywords" content="">
   
-    <meta name="description" content="关于由于我心血来潮想在Linux桌面上建立适合我的桌面 ，所以记录一下我踩的坑  为啥用ibus呢？ 这玩意好像没有Fcitx5好用可是gnome 下系统默认输入法 和 组件是ibus 悲为了整体美观 开干  安装 ibus-rime1sudo apt install ibus-rime  设置 ibus-rime注 环境为 gnome  桌面环境下1vi ~&#x2F;.xinputrc 写入run_im">
+    <meta name="description" content="前言抱着能偷懒 就偷懒的心态研究了下GitHub Action 好家伙英文中文混合开火 直接给我干蒙了简单的看了下 还是成功了 后面有时间还是要了解下的 感觉很有用 现在就是能用就行 创建GitHub Action 打开GitHub 仓库位置  点击 Action 点击 new workflows 写入 1234567891011121314151617181920212223name: depl">
 <meta property="og:type" content="article">
-<meta property="og:title" content="设置Debian系统的Ibus-rime">
-<meta property="og:url" content="https://blog.ltfy.top/2022/07/30/setDebianIbus-rime/index.html">
+<meta property="og:title" content="github Action自动化部署hexo博客">
+<meta property="og:url" content="https://blog.ltfy.top/post/githubActionDeployHexo/index.html">
 <meta property="og:site_name" content="烛昔小屋">
-<meta property="og:description" content="关于由于我心血来潮想在Linux桌面上建立适合我的桌面 ，所以记录一下我踩的坑  为啥用ibus呢？ 这玩意好像没有Fcitx5好用可是gnome 下系统默认输入法 和 组件是ibus 悲为了整体美观 开干  安装 ibus-rime1sudo apt install ibus-rime  设置 ibus-rime注 环境为 gnome  桌面环境下1vi ~&#x2F;.xinputrc 写入run_im">
+<meta property="og:description" content="前言抱着能偷懒 就偷懒的心态研究了下GitHub Action 好家伙英文中文混合开火 直接给我干蒙了简单的看了下 还是成功了 后面有时间还是要了解下的 感觉很有用 现在就是能用就行 创建GitHub Action 打开GitHub 仓库位置  点击 Action 点击 new workflows 写入 1234567891011121314151617181920212223name: depl">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-07-30T14:50:48.000Z">
-<meta property="article:modified_time" content="2022-10-03T03:13:29.460Z">
+<meta property="article:published_time" content="2022-08-01T13:25:31.000Z">
+<meta property="article:modified_time" content="2022-10-16T06:58:03.217Z">
 <meta property="article:author" content="Luka">
+<meta property="article:tag" content="Github">
+<meta property="article:tag" content="GithubAction">
+<meta property="article:tag" content="hexo">
 <meta name="twitter:card" content="summary_large_image">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>设置Debian系统的Ibus-rime - 烛昔小屋</title>
+  <title>github Action自动化部署hexo博客 - 烛昔小屋</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -199,7 +202,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="设置Debian系统的Ibus-rime"></span>
+            <span id="subtitle" data-typed-text="github Action自动化部署hexo博客"></span>
           
         </div>
 
@@ -215,8 +218,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-07-30 14:50" pubdate>
-          2022年7月30日 下午
+        <time datetime="2022-08-01 13:25" pubdate>
+          2022年8月1日 下午
         </time>
       </span>
     
@@ -227,7 +230,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          722 字
+          607 字
         
       </span>
     
@@ -238,7 +241,7 @@
         
         
         
-          7 分钟
+          6 分钟
         
       </span>
     
@@ -284,12 +287,12 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">设置Debian系统的Ibus-rime</h1>
+            <h1 style="display: none">github Action自动化部署hexo博客</h1>
             
               <p class="note note-info">
                 
                   
-                    本文最后更新于：2022年10月3日 凌晨
+                    本文最后更新于：2022年10月16日 早上
                   
                 
               </p>
@@ -297,39 +300,14 @@
             
               <div class="markdown-body">
                 
-                <h1 id="关于"><a href="#关于" class="headerlink" title="关于"></a>关于</h1><p>由于我<em>心血来潮</em>想在Linux桌面上建立适合我的桌面 ，所以记录一下我踩的<strong>坑</strong></p>
-<blockquote>
-<p>为啥用ibus呢？ 这玩意好像没有Fcitx5好用<br>可是gnome 下系统默认输入法 和 组件是ibus 悲<br>为了整体美观 开干</p>
-</blockquote>
-<h1 id="安装-ibus-rime"><a href="#安装-ibus-rime" class="headerlink" title="安装 ibus-rime"></a>安装 ibus-rime</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo apt install ibus-rime<br></code></pre></td></tr></table></figure>
-
-<h1 id="设置-ibus-rime"><a href="#设置-ibus-rime" class="headerlink" title="设置 ibus-rime"></a>设置 ibus-rime</h1><h2 id="注-环境为-gnome-桌面环境下"><a href="#注-环境为-gnome-桌面环境下" class="headerlink" title="注 环境为 gnome  桌面环境下"></a><em>注</em> 环境为 gnome  桌面环境下</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">vi ~/.xinputrc<br></code></pre></td></tr></table></figure>
-<p>写入<br><code>run_im ibus</code><br>vi操作 <code>i</code> <code>esc</code> <code>:wq</code></p>
-<p>后退出登录（注销）再进入</p>
-<blockquote>
-<p>这个是命令操作 不过我一开始是弄得 gnome应用 里的 那个<code>输入法</code> 你可能会问我为什么一开始不说那个 因为<em>水水水</em></p>
-</blockquote>
-<h1 id="启用-ibus-rime"><a href="#启用-ibus-rime" class="headerlink" title="启用 ibus-rime"></a>启用 ibus-rime</h1><ol>
-<li>打开设置</li>
-<li>找到区域和语言</li>
-<li>添加输入源 <code>中国（汉语）</code> <code>rime</code></li>
-<li>随便打开一个输入栏 切换 <code>中文rime</code> </li>
-<li>注销登录</li>
-<li>看能不能输入中文</li>
+                <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>抱着能偷懒 就偷懒的心态研究了下GitHub Action 好家伙英文中文混合开火 直接给我干蒙了<br>简单的看了下 还是成功了 后面有时间还是要了解下的 感觉很有用 <em>现在就是能用就行</em></p>
+<h1 id="创建GitHub-Action"><a href="#创建GitHub-Action" class="headerlink" title="创建GitHub Action"></a>创建GitHub Action</h1><ol>
+<li>打开GitHub 仓库位置 </li>
+<li>点击 Action</li>
+<li>点击 new workflows</li>
+<li>写入 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs yml"><span class="hljs-attr">name:</span> <span class="hljs-string">deploy</span><br><br><span class="hljs-attr">on:</span><br>  <span class="hljs-attr">push:</span><br>    <span class="hljs-attr">branches:</span> [ <span class="hljs-string">&quot;master&quot;</span> ]<br><span class="hljs-attr">jobs:</span><br>  <span class="hljs-attr">build:</span><br>    <span class="hljs-attr">runs-on:</span> <span class="hljs-string">ubuntu-latest</span><br>    <span class="hljs-attr">steps:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">uses:</span> <span class="hljs-string">actions/checkout@v3</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">uses:</span> <span class="hljs-string">actions/setup-node@v3</span><br>        <span class="hljs-attr">with:</span><br>          <span class="hljs-attr">node-version:</span> <span class="hljs-string">latest</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">build</span><br>        <span class="hljs-attr">run:</span> <span class="hljs-string">npm</span> <span class="hljs-string">install</span> <span class="hljs-string">&amp;&amp;</span> <span class="hljs-string">npx</span> <span class="hljs-string">hexo</span> <span class="hljs-string">generate</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">deploy</span><br>        <span class="hljs-attr">uses:</span> <span class="hljs-string">peaceiris/actions-gh-pages@v3</span><br>        <span class="hljs-attr">with:</span> <br>          <span class="hljs-attr">github_token:</span> <span class="hljs-string">$&#123;&#123;</span> <span class="hljs-string">secrets.GITHUB_TOKEN</span> <span class="hljs-string">&#125;&#125;</span><br>          <span class="hljs-attr">publish_branch:</span> <span class="hljs-string">gh-pages</span><br>          <span class="hljs-attr">publish_dir:</span> <span class="hljs-string">public</span><br>          <span class="hljs-attr">cname:</span> <span class="hljs-string">you.webSite.com</span><br><br></code></pre></td></tr></table></figure></li>
 </ol>
-<h1 id="关于上述完成后打不出中文解决方案一"><a href="#关于上述完成后打不出中文解决方案一" class="headerlink" title="关于上述完成后打不出中文解决方案一"></a>关于上述完成后打不出中文解决方案一</h1><blockquote>
-<p>缘由 在试了半天后逛逛应用商店 发现一个ibus首选项的东西</p>
-</blockquote>
-<ol>
-<li>打开终端<br> 输入 <code>ibus-setup</code><br> 在窗口中 点击输入法<br> 添加 <code>...</code> <code>中文</code> <code>rime</code><br> 删除其他的输入法<br> 注销登录</li>
-</ol>
-<p>再试试能不能输入中文</p>
-<h1 id="大坑"><a href="#大坑" class="headerlink" title="大坑"></a>大坑</h1><p>由于rime竖向向太丑于是想调成横向<br>官方给的</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># weasel.custom.yaml</span><br>patch:<br>  style/horizontal: <span class="hljs-literal">true</span>      <span class="hljs-comment"># 候選橫排</span><br>  style/inline_preedit: <span class="hljs-literal">true</span>  <span class="hljs-comment"># 內嵌編碼（僅支持TSF）</span><br>  style/display_tray_icon: <span class="hljs-literal">true</span>  <span class="hljs-comment"># 顯示托盤圖標</span><br><br><span class="hljs-comment">#ibus用户： ibus_rime.custom.yaml</span><br></code></pre></td></tr></table></figure>
-<p>结果您猜怎么样 <strong>根本用不了</strong><br>解决 由于配置最后是在build中执行的 所以把文件放入build中</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># ~/.config/ibus/rime/build/ibus_rime.yaml</span><br>style:<br>    horizontal: <span class="hljs-literal">true</span><br></code></pre></td></tr></table></figure>
-
-<h1 id="更多"><a href="#更多" class="headerlink" title="更多"></a>更多</h1><p><a target="_blank" rel="noopener" href="https://rime.im/">rime</a></p>
+<h1 id="相关参考"><a href="#相关参考" class="headerlink" title="相关参考"></a>相关参考</h1><p><a target="_blank" rel="noopener" href="https://github.com/marketplace?type=actions&query=actions">Github Actiom 市场</a><br><a target="_blank" rel="noopener" href="https://github.com/actions/setup-node">Action nodejs-setup</a><br><a target="_blank" rel="noopener" href="https://github.com/peaceiris/actions-gh-pages">Action deploy-pages</a></p>
 
                 
               </div>
@@ -338,6 +316,45 @@
             <div>
               <div class="post-metas my-3">
   
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Github/" class="category-chain-item">Github</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/Github/Action/" class="category-chain-item">Action</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Github/">#Github</a>
+      
+        <a href="/tags/GithubAction/">#GithubAction</a>
+      
+        <a href="/tags/hexo/">#hexo</a>
+      
+    </div>
   
 </div>
 
@@ -347,8 +364,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>设置Debian系统的Ibus-rime</div>
-      <div>https://blog.ltfy.top/2022/07/30/setDebianIbus-rime/</div>
+      <div>github Action自动化部署hexo博客</div>
+      <div>https://blog.ltfy.top/post/githubActionDeployHexo/</div>
     </div>
     <div class="license-meta">
       
@@ -360,7 +377,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年7月30日</div>
+          <div>2022年8月1日</div>
         </div>
       
       
@@ -390,15 +407,21 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/08/01/githubActionDeployHexo/" title="github Action自动化部署hexo博客">
+                      <a href="/post/termuxForHexoWrite/" title="利用termux写hexo博客">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">github Action自动化部署hexo博客</span>
+                        <span class="hidden-mobile">利用termux写hexo博客</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
                   </article>
                   <article class="post-next col-6">
                     
+                    
+                      <a href="/post/setDebianIbus-rime/" title="设置Debian系统的Ibus-rime">
+                        <span class="hidden-mobile">设置Debian系统的Ibus-rime</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
                     
                   </article>
                 </div>

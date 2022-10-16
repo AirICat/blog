@@ -18,24 +18,24 @@
   <meta name="author" content="Luka">
   <meta name="keywords" content="">
   
-    <meta name="description" content="维护的服务器信息 如果有些错误无法解决可能我们的配置不一致  系统 win2016脚本语言 bash,bat   bash 由git驱动  服务器无法进入 （无法连接steam） 对于国内服务器，steam服务属于半屏蔽状态，所以使用一个合理的加速很重要  对于这个问题感谢某律云的站长，提示我使用steam302，这边也感谢steam302提供的服务  steam302  由于 服务器的 端口+1">
+    <meta name="description" content="需要材料 正常steam账号 服务器  Steamcmd 这是一个steam 命令端 可在linux使用而无需可视化桌面  首先下载 SteamCMD 选择对应的服务器系统类型 解压运行 -&gt; 等待自动更新 在此目录新建脚本文件 - 建议名字为updata.bat 1.\steamcmd.exe +force_install_dir .&#x2F;UDS&#x2F; +login anonymous +app_">
 <meta property="og:type" content="article">
-<meta property="og:title" content="未转变者常见问题解决方案">
-<meta property="og:url" content="https://blog.ltfy.top/2022/10/01/UnturnedMaintain1/index.html">
+<meta property="og:title" content="未转变者服务器初始化">
+<meta property="og:url" content="https://blog.ltfy.top/post/StartUnturned/index.html">
 <meta property="og:site_name" content="烛昔小屋">
-<meta property="og:description" content="维护的服务器信息 如果有些错误无法解决可能我们的配置不一致  系统 win2016脚本语言 bash,bat   bash 由git驱动  服务器无法进入 （无法连接steam） 对于国内服务器，steam服务属于半屏蔽状态，所以使用一个合理的加速很重要  对于这个问题感谢某律云的站长，提示我使用steam302，这边也感谢steam302提供的服务  steam302  由于 服务器的 端口+1">
+<meta property="og:description" content="需要材料 正常steam账号 服务器  Steamcmd 这是一个steam 命令端 可在linux使用而无需可视化桌面  首先下载 SteamCMD 选择对应的服务器系统类型 解压运行 -&gt; 等待自动更新 在此目录新建脚本文件 - 建议名字为updata.bat 1.\steamcmd.exe +force_install_dir .&#x2F;UDS&#x2F; +login anonymous +app_">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-10-01T20:12:14.000Z">
-<meta property="article:modified_time" content="2022-10-03T03:13:29.460Z">
+<meta property="article:published_time" content="2022-09-29T19:28:34.000Z">
+<meta property="article:modified_time" content="2022-10-16T06:58:03.217Z">
 <meta property="article:author" content="Luka">
-<meta property="article:tag" content="GameServerMaintain">
+<meta property="article:tag" content="GameServer">
 <meta name="twitter:card" content="summary_large_image">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>未转变者常见问题解决方案 - 烛昔小屋</title>
+  <title>未转变者服务器初始化 - 烛昔小屋</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -200,7 +200,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="未转变者常见问题解决方案"></span>
+            <span id="subtitle" data-typed-text="未转变者服务器初始化"></span>
           
         </div>
 
@@ -216,8 +216,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-10-01 20:12" pubdate>
-          2022年10月1日 晚上
+        <time datetime="2022-09-29 19:28" pubdate>
+          2022年9月29日 晚上
         </time>
       </span>
     
@@ -228,7 +228,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          378 字
+          722 字
         
       </span>
     
@@ -239,7 +239,7 @@
         
         
         
-          4 分钟
+          7 分钟
         
       </span>
     
@@ -285,12 +285,12 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">未转变者常见问题解决方案</h1>
+            <h1 style="display: none">未转变者服务器初始化</h1>
             
               <p class="note note-info">
                 
                   
-                    本文最后更新于：2022年10月3日 凌晨
+                    本文最后更新于：2022年10月16日 早上
                   
                 
               </p>
@@ -298,31 +298,37 @@
             
               <div class="markdown-body">
                 
-                <h1 id="维护的服务器信息"><a href="#维护的服务器信息" class="headerlink" title="维护的服务器信息"></a>维护的服务器信息</h1><blockquote>
-<p>如果有些错误无法解决可能我们的配置不一致</p>
-</blockquote>
-<p>系统 <code>win2016</code><br>脚本语言 <code>bash,bat</code> </p>
-<blockquote>
-<p>bash 由git驱动</p>
-</blockquote>
-<h1 id="服务器无法进入-（无法连接steam）"><a href="#服务器无法进入-（无法连接steam）" class="headerlink" title="服务器无法进入 （无法连接steam）"></a>服务器无法进入 （无法连接steam）</h1><ol>
-<li><p>对于国内服务器，steam服务属于半屏蔽状态，所以使用一个合理的加速很重要<br>  对于这个问题感谢某律云的站长，提示我使用steam302，这边也感谢steam302提供的服务<br>  <a target="_blank" rel="noopener" href="https://www.dogfight360.com/blog/686/">steam302</a></p>
-</li>
-<li><p>由于 服务器的 端口+1和端口+2也被使用</p>
-<blockquote>
-<p>所以保证这些端口也能对外访问</p>
-</blockquote>
-</li>
-<li><p>由于steam 在国内属于半屏蔽状态 所以一个好的dns很重要<br> 我使用的是 144.144.144.144 <del>虽然说是电信的，但好像没啥问题</del></p>
-</li>
-<li><p>由于 系统 win2016 cmd听说有bug 所以我使用的bash唤醒</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">winpty ./SevrerHelper.bat +InternetServer/Luka<br></code></pre></td></tr></table></figure>
-<p>这条不重要</p>
-</li>
+                <h1 id="需要材料"><a href="#需要材料" class="headerlink" title="需要材料"></a>需要材料</h1><ol>
+<li>正常steam账号</li>
+<li>服务器</li>
 </ol>
-<h1 id="更多"><a href="#更多" class="headerlink" title="更多"></a>更多</h1><a href="/2022/09/29/StartUnturned/" title="未转变者服务器初始化">未转变者服务器初始化</a>
-<a href="/2022/09/30/UnturnedMaintain/" title="未转变者维护配置">未转变者维护配置</a>
-<a href="/2022/10/02/UnturnedMaintain2/" title="未转变者维护插件配置">未转变者维护插件配置</a>
+<h1 id="Steamcmd"><a href="#Steamcmd" class="headerlink" title="Steamcmd"></a>Steamcmd</h1><blockquote>
+<p>这是一个steam 命令端 可在linux使用而无需可视化桌面</p>
+</blockquote>
+<p>首先下载 <a target="_blank" rel="noopener" href="https://developer.valvesoftware.com/wiki/SteamCMD">SteamCMD</a></p>
+<p>选择对应的服务器系统类型</p>
+<p>解压运行 -&gt; 等待自动更新</p>
+<p>在此目录新建脚本文件 - 建议名字为updata.bat</p>
+<figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs dos">.\steamcmd.exe +force_install_dir ./UDS/ +login anonymous +app_update <span class="hljs-number">1110390</span> validate<br></code></pre></td></tr></table></figure>
+
+<h2 id="命令解析"><a href="#命令解析" class="headerlink" title="命令解析"></a>命令解析</h2><ol>
+<li>‘.&#x2F;steamcmd.exe’ 为调用的程序</li>
+<li>+login 为登录的用户 anonymous 为无账号登录使用的公共账号</li>
+<li>+force_install_dir 为安装的位置</li>
+<li>+app_update 为更新或者下载的id 未转变者服务器id为 1110390 , validate 为验证下载的文件</li>
+</ol>
+<p>我比较喜欢bash命令所以我用的是</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">winpty ./steamcmd.exe +login anonymous +force_install_dir ./UDS/ +app_update 1110390 validate +quit<br></code></pre></td></tr></table></figure>
+
+<p>为啥有个winpty<br>因为没有这个对于win命令或交互会无响应，而且加了运行也快了一点</p>
+<h1 id="新建开服信息"><a href="#新建开服信息" class="headerlink" title="新建开服信息"></a>新建开服信息</h1><p>进入steamcmd目录<br>进入uds目录<br>新建LukaServer.bat</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs cmd"><span class="hljs-built_in">start</span> &quot;&quot; &quot;%~dp0ServerHelper.bat&quot; +InternetServer/Luka<br><span class="hljs-keyword">exit</span><br></code></pre></td></tr></table></figure>
+<p>+InternetServer 为互联网模式可换为 +LanServer 局域网模式<br>&#x2F;后面为服务器备注路径名</p>
+<h1 id="更多"><a href="#更多" class="headerlink" title="更多"></a>更多</h1><a href="/post/UnturnedMaintain/" title="未转变者维护配置">未转变者维护配置</a>
+<a href="/post/UnturnedMaintain1/" title="未转变者常见问题解决方案">未转变者常见问题解决方案</a>
+<a href="/post/UnturnedMaintain2/" title="未转变者维护插件配置">未转变者维护插件配置</a>
+
+<h1 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h1><p><a target="_blank" rel="noopener" href="https://www.unbbs.net/258.html">傻瓜式架设专用服 | 开服教程</a><br><a target="_blank" rel="noopener" href="https://developer.valvesoftware.com/wiki/SteamCMD:zh-cn#.E5.8C.BF.E5.90.8D.E7.99.BB.E5.BD.95">steamCMD</a></p>
 
                 
               </div>
@@ -363,7 +369,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/GameServerMaintain/">#GameServerMaintain</a>
+        <a href="/tags/GameServer/">#GameServer</a>
       
     </div>
   
@@ -375,8 +381,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>未转变者常见问题解决方案</div>
-      <div>https://blog.ltfy.top/2022/10/01/UnturnedMaintain1/</div>
+      <div>未转变者服务器初始化</div>
+      <div>https://blog.ltfy.top/post/StartUnturned/</div>
     </div>
     <div class="license-meta">
       
@@ -388,7 +394,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年10月1日</div>
+          <div>2022年9月29日</div>
         </div>
       
       
@@ -418,9 +424,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/10/02/ScheduledTasks/" title="定时任务">
+                      <a href="/post/UnturnedMaintain/" title="未转变者维护配置">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">定时任务</span>
+                        <span class="hidden-mobile">未转变者维护配置</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -428,8 +434,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/09/30/UnturnedMaintain/" title="未转变者维护配置">
-                        <span class="hidden-mobile">未转变者维护配置</span>
+                      <a href="/post/whyLearnMyLike/" title="我为什么要去学我喜欢的">
+                        <span class="hidden-mobile">我为什么要去学我喜欢的</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

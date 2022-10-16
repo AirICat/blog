@@ -18,23 +18,24 @@
   <meta name="author" content="Luka">
   <meta name="keywords" content="">
   
-    <meta name="description" content="关于由于我心血来潮想在Linux桌面上建立适合我的桌面 ，所以记录一下我踩的坑  为啥用ibus呢？ 这玩意好像没有Fcitx5好用可是gnome 下系统默认输入法 和 组件是ibus 悲为了整体美观 开干  安装 ibus-rime1sudo apt install ibus-rime  设置 ibus-rime注 环境为 gnome  桌面环境下1vi ~&#x2F;.xinputrc 写入run_im">
+    <meta name="description" content="维护的服务器信息 如果有些错误无法解决可能我们的配置不一致  系统 win2016脚本语言 bash,bat   bash 由git驱动  服务器无法进入 （无法连接steam） 对于国内服务器，steam服务属于半屏蔽状态，所以使用一个合理的加速很重要  对于这个问题感谢某律云的站长，提示我使用steam302，这边也感谢steam302提供的服务  steam302  由于 服务器的 端口+1">
 <meta property="og:type" content="article">
-<meta property="og:title" content="设置Debian系统的Ibus-rime">
-<meta property="og:url" content="https://blog.ltfy.top/post/setDebianIbus-rime/index.html">
+<meta property="og:title" content="未转变者常见问题解决方案">
+<meta property="og:url" content="https://blog.ltfy.top/posts/UnturnedMaintain1/index.html">
 <meta property="og:site_name" content="烛昔小屋">
-<meta property="og:description" content="关于由于我心血来潮想在Linux桌面上建立适合我的桌面 ，所以记录一下我踩的坑  为啥用ibus呢？ 这玩意好像没有Fcitx5好用可是gnome 下系统默认输入法 和 组件是ibus 悲为了整体美观 开干  安装 ibus-rime1sudo apt install ibus-rime  设置 ibus-rime注 环境为 gnome  桌面环境下1vi ~&#x2F;.xinputrc 写入run_im">
+<meta property="og:description" content="维护的服务器信息 如果有些错误无法解决可能我们的配置不一致  系统 win2016脚本语言 bash,bat   bash 由git驱动  服务器无法进入 （无法连接steam） 对于国内服务器，steam服务属于半屏蔽状态，所以使用一个合理的加速很重要  对于这个问题感谢某律云的站长，提示我使用steam302，这边也感谢steam302提供的服务  steam302  由于 服务器的 端口+1">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-07-30T14:50:48.000Z">
-<meta property="article:modified_time" content="2022-10-16T07:05:19.996Z">
+<meta property="article:published_time" content="2022-10-01T20:12:14.000Z">
+<meta property="article:modified_time" content="2022-10-16T07:27:24.384Z">
 <meta property="article:author" content="Luka">
+<meta property="article:tag" content="GameServerMaintain">
 <meta name="twitter:card" content="summary_large_image">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>设置Debian系统的Ibus-rime - 烛昔小屋</title>
+  <title>未转变者常见问题解决方案 - 烛昔小屋</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -199,7 +200,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="设置Debian系统的Ibus-rime"></span>
+            <span id="subtitle" data-typed-text="未转变者常见问题解决方案"></span>
           
         </div>
 
@@ -215,8 +216,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-07-30 14:50" pubdate>
-          2022年7月30日 下午
+        <time datetime="2022-10-01 20:12" pubdate>
+          2022年10月1日 晚上
         </time>
       </span>
     
@@ -227,7 +228,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          722 字
+          378 字
         
       </span>
     
@@ -238,7 +239,7 @@
         
         
         
-          7 分钟
+          4 分钟
         
       </span>
     
@@ -284,7 +285,7 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">设置Debian系统的Ibus-rime</h1>
+            <h1 style="display: none">未转变者常见问题解决方案</h1>
             
               <p class="note note-info">
                 
@@ -297,39 +298,31 @@
             
               <div class="markdown-body">
                 
-                <h1 id="关于"><a href="#关于" class="headerlink" title="关于"></a>关于</h1><p>由于我<em>心血来潮</em>想在Linux桌面上建立适合我的桌面 ，所以记录一下我踩的<strong>坑</strong></p>
+                <h1 id="维护的服务器信息"><a href="#维护的服务器信息" class="headerlink" title="维护的服务器信息"></a>维护的服务器信息</h1><blockquote>
+<p>如果有些错误无法解决可能我们的配置不一致</p>
+</blockquote>
+<p>系统 <code>win2016</code><br>脚本语言 <code>bash,bat</code> </p>
 <blockquote>
-<p>为啥用ibus呢？ 这玩意好像没有Fcitx5好用<br>可是gnome 下系统默认输入法 和 组件是ibus 悲<br>为了整体美观 开干</p>
+<p>bash 由git驱动</p>
 </blockquote>
-<h1 id="安装-ibus-rime"><a href="#安装-ibus-rime" class="headerlink" title="安装 ibus-rime"></a>安装 ibus-rime</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo apt install ibus-rime<br></code></pre></td></tr></table></figure>
-
-<h1 id="设置-ibus-rime"><a href="#设置-ibus-rime" class="headerlink" title="设置 ibus-rime"></a>设置 ibus-rime</h1><h2 id="注-环境为-gnome-桌面环境下"><a href="#注-环境为-gnome-桌面环境下" class="headerlink" title="注 环境为 gnome  桌面环境下"></a><em>注</em> 环境为 gnome  桌面环境下</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">vi ~/.xinputrc<br></code></pre></td></tr></table></figure>
-<p>写入<br><code>run_im ibus</code><br>vi操作 <code>i</code> <code>esc</code> <code>:wq</code></p>
-<p>后退出登录（注销）再进入</p>
+<h1 id="服务器无法进入-（无法连接steam）"><a href="#服务器无法进入-（无法连接steam）" class="headerlink" title="服务器无法进入 （无法连接steam）"></a>服务器无法进入 （无法连接steam）</h1><ol>
+<li><p>对于国内服务器，steam服务属于半屏蔽状态，所以使用一个合理的加速很重要<br>  对于这个问题感谢某律云的站长，提示我使用steam302，这边也感谢steam302提供的服务<br>  <a target="_blank" rel="noopener" href="https://www.dogfight360.com/blog/686/">steam302</a></p>
+</li>
+<li><p>由于 服务器的 端口+1和端口+2也被使用</p>
 <blockquote>
-<p>这个是命令操作 不过我一开始是弄得 gnome应用 里的 那个<code>输入法</code> 你可能会问我为什么一开始不说那个 因为<em>水水水</em></p>
+<p>所以保证这些端口也能对外访问</p>
 </blockquote>
-<h1 id="启用-ibus-rime"><a href="#启用-ibus-rime" class="headerlink" title="启用 ibus-rime"></a>启用 ibus-rime</h1><ol>
-<li>打开设置</li>
-<li>找到区域和语言</li>
-<li>添加输入源 <code>中国（汉语）</code> <code>rime</code></li>
-<li>随便打开一个输入栏 切换 <code>中文rime</code> </li>
-<li>注销登录</li>
-<li>看能不能输入中文</li>
+</li>
+<li><p>由于steam 在国内属于半屏蔽状态 所以一个好的dns很重要<br> 我使用的是 144.144.144.144 <del>虽然说是电信的，但好像没啥问题</del></p>
+</li>
+<li><p>由于 系统 win2016 cmd听说有bug 所以我使用的bash唤醒</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">winpty ./SevrerHelper.bat +InternetServer/Luka<br></code></pre></td></tr></table></figure>
+<p>这条不重要</p>
+</li>
 </ol>
-<h1 id="关于上述完成后打不出中文解决方案一"><a href="#关于上述完成后打不出中文解决方案一" class="headerlink" title="关于上述完成后打不出中文解决方案一"></a>关于上述完成后打不出中文解决方案一</h1><blockquote>
-<p>缘由 在试了半天后逛逛应用商店 发现一个ibus首选项的东西</p>
-</blockquote>
-<ol>
-<li>打开终端<br> 输入 <code>ibus-setup</code><br> 在窗口中 点击输入法<br> 添加 <code>...</code> <code>中文</code> <code>rime</code><br> 删除其他的输入法<br> 注销登录</li>
-</ol>
-<p>再试试能不能输入中文</p>
-<h1 id="大坑"><a href="#大坑" class="headerlink" title="大坑"></a>大坑</h1><p>由于rime竖向向太丑于是想调成横向<br>官方给的</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># weasel.custom.yaml</span><br>patch:<br>  style/horizontal: <span class="hljs-literal">true</span>      <span class="hljs-comment"># 候選橫排</span><br>  style/inline_preedit: <span class="hljs-literal">true</span>  <span class="hljs-comment"># 內嵌編碼（僅支持TSF）</span><br>  style/display_tray_icon: <span class="hljs-literal">true</span>  <span class="hljs-comment"># 顯示托盤圖標</span><br><br><span class="hljs-comment">#ibus用户： ibus_rime.custom.yaml</span><br></code></pre></td></tr></table></figure>
-<p>结果您猜怎么样 <strong>根本用不了</strong><br>解决 由于配置最后是在build中执行的 所以把文件放入build中</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># ~/.config/ibus/rime/build/ibus_rime.yaml</span><br>style:<br>    horizontal: <span class="hljs-literal">true</span><br></code></pre></td></tr></table></figure>
-
-<h1 id="更多"><a href="#更多" class="headerlink" title="更多"></a>更多</h1><p><a target="_blank" rel="noopener" href="https://rime.im/">rime</a></p>
+<h1 id="更多"><a href="#更多" class="headerlink" title="更多"></a>更多</h1><a href="/posts/StartUnturned/" title="未转变者服务器初始化">未转变者服务器初始化</a>
+<a href="/posts/UnturnedMaintain/" title="未转变者维护配置">未转变者维护配置</a>
+<a href="/posts/UnturnedMaintain2/" title="未转变者维护插件配置">未转变者维护插件配置</a>
 
                 
               </div>
@@ -338,6 +331,41 @@
             <div>
               <div class="post-metas my-3">
   
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/GameServer/" class="category-chain-item">GameServer</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/GameServer/Unturned/" class="category-chain-item">Unturned</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/GameServerMaintain/">#GameServerMaintain</a>
+      
+    </div>
   
 </div>
 
@@ -347,8 +375,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>设置Debian系统的Ibus-rime</div>
-      <div>https://blog.ltfy.top/post/setDebianIbus-rime/</div>
+      <div>未转变者常见问题解决方案</div>
+      <div>https://blog.ltfy.top/posts/UnturnedMaintain1/</div>
     </div>
     <div class="license-meta">
       
@@ -360,7 +388,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年7月30日</div>
+          <div>2022年10月1日</div>
         </div>
       
       
@@ -390,15 +418,21 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/post/githubActionDeployHexo/" title="github Action自动化部署hexo博客">
+                      <a href="/posts/ScheduledTasks/" title="定时任务">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">github Action自动化部署hexo博客</span>
+                        <span class="hidden-mobile">定时任务</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
                   </article>
                   <article class="post-next col-6">
                     
+                    
+                      <a href="/posts/UnturnedMaintain/" title="未转变者维护配置">
+                        <span class="hidden-mobile">未转变者维护配置</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
                     
                   </article>
                 </div>

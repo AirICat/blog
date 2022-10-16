@@ -18,26 +18,24 @@
   <meta name="author" content="Luka">
   <meta name="keywords" content="">
   
-    <meta name="description" content="前言抱着能偷懒 就偷懒的心态研究了下GitHub Action 好家伙英文中文混合开火 直接给我干蒙了简单的看了下 还是成功了 后面有时间还是要了解下的 感觉很有用 现在就是能用就行 创建GitHub Action 打开GitHub 仓库位置  点击 Action 点击 new workflows 写入 1234567891011121314151617181920212223name: depl">
+    <meta name="description" content="注意 根目录 一般为未转变者根目录 服务器目录 一般为根目录 Servers&#x2F;服务器 目录  流程 command.dat config.json plugins  command.dat位于服务器目录 &#x2F;server&#x2F;command.dat此文件为配置基础信息 值解析 Name为服务器名字 最少5个字符，最多(好像是11)  Map 此为选择的地图 可在根目录 Ma">
 <meta property="og:type" content="article">
-<meta property="og:title" content="github Action自动化部署hexo博客">
-<meta property="og:url" content="https://blog.ltfy.top/post/githubActionDeployHexo/index.html">
+<meta property="og:title" content="未转变者维护配置">
+<meta property="og:url" content="https://blog.ltfy.top/posts/UnturnedMaintain/index.html">
 <meta property="og:site_name" content="烛昔小屋">
-<meta property="og:description" content="前言抱着能偷懒 就偷懒的心态研究了下GitHub Action 好家伙英文中文混合开火 直接给我干蒙了简单的看了下 还是成功了 后面有时间还是要了解下的 感觉很有用 现在就是能用就行 创建GitHub Action 打开GitHub 仓库位置  点击 Action 点击 new workflows 写入 1234567891011121314151617181920212223name: depl">
+<meta property="og:description" content="注意 根目录 一般为未转变者根目录 服务器目录 一般为根目录 Servers&#x2F;服务器 目录  流程 command.dat config.json plugins  command.dat位于服务器目录 &#x2F;server&#x2F;command.dat此文件为配置基础信息 值解析 Name为服务器名字 最少5个字符，最多(好像是11)  Map 此为选择的地图 可在根目录 Ma">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-08-01T13:25:31.000Z">
-<meta property="article:modified_time" content="2022-10-16T07:05:19.996Z">
+<meta property="article:published_time" content="2022-09-30T10:36:48.000Z">
+<meta property="article:modified_time" content="2022-10-16T07:27:24.384Z">
 <meta property="article:author" content="Luka">
-<meta property="article:tag" content="Github">
-<meta property="article:tag" content="GithubAction">
-<meta property="article:tag" content="hexo">
+<meta property="article:tag" content="GameServerMaintain">
 <meta name="twitter:card" content="summary_large_image">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>github Action自动化部署hexo博客 - 烛昔小屋</title>
+  <title>未转变者维护配置 - 烛昔小屋</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -202,7 +200,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="github Action自动化部署hexo博客"></span>
+            <span id="subtitle" data-typed-text="未转变者维护配置"></span>
           
         </div>
 
@@ -218,8 +216,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-08-01 13:25" pubdate>
-          2022年8月1日 下午
+        <time datetime="2022-09-30 10:36" pubdate>
+          2022年9月30日 上午
         </time>
       </span>
     
@@ -230,7 +228,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          607 字
+          803 字
         
       </span>
     
@@ -241,7 +239,7 @@
         
         
         
-          6 分钟
+          7 分钟
         
       </span>
     
@@ -287,7 +285,7 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">github Action自动化部署hexo博客</h1>
+            <h1 style="display: none">未转变者维护配置</h1>
             
               <p class="note note-info">
                 
@@ -300,14 +298,59 @@
             
               <div class="markdown-body">
                 
-                <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>抱着能偷懒 就偷懒的心态研究了下GitHub Action 好家伙英文中文混合开火 直接给我干蒙了<br>简单的看了下 还是成功了 后面有时间还是要了解下的 感觉很有用 <em>现在就是能用就行</em></p>
-<h1 id="创建GitHub-Action"><a href="#创建GitHub-Action" class="headerlink" title="创建GitHub Action"></a>创建GitHub Action</h1><ol>
-<li>打开GitHub 仓库位置 </li>
-<li>点击 Action</li>
-<li>点击 new workflows</li>
-<li>写入 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs yml"><span class="hljs-attr">name:</span> <span class="hljs-string">deploy</span><br><br><span class="hljs-attr">on:</span><br>  <span class="hljs-attr">push:</span><br>    <span class="hljs-attr">branches:</span> [ <span class="hljs-string">&quot;master&quot;</span> ]<br><span class="hljs-attr">jobs:</span><br>  <span class="hljs-attr">build:</span><br>    <span class="hljs-attr">runs-on:</span> <span class="hljs-string">ubuntu-latest</span><br>    <span class="hljs-attr">steps:</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">uses:</span> <span class="hljs-string">actions/checkout@v3</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">uses:</span> <span class="hljs-string">actions/setup-node@v3</span><br>        <span class="hljs-attr">with:</span><br>          <span class="hljs-attr">node-version:</span> <span class="hljs-string">latest</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">build</span><br>        <span class="hljs-attr">run:</span> <span class="hljs-string">npm</span> <span class="hljs-string">install</span> <span class="hljs-string">&amp;&amp;</span> <span class="hljs-string">npx</span> <span class="hljs-string">hexo</span> <span class="hljs-string">generate</span><br>      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">deploy</span><br>        <span class="hljs-attr">uses:</span> <span class="hljs-string">peaceiris/actions-gh-pages@v3</span><br>        <span class="hljs-attr">with:</span> <br>          <span class="hljs-attr">github_token:</span> <span class="hljs-string">$&#123;&#123;</span> <span class="hljs-string">secrets.GITHUB_TOKEN</span> <span class="hljs-string">&#125;&#125;</span><br>          <span class="hljs-attr">publish_branch:</span> <span class="hljs-string">gh-pages</span><br>          <span class="hljs-attr">publish_dir:</span> <span class="hljs-string">public</span><br>          <span class="hljs-attr">cname:</span> <span class="hljs-string">you.webSite.com</span><br><br></code></pre></td></tr></table></figure></li>
+                <h1 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h1><ol>
+<li>根目录 一般为未转变者根目录</li>
+<li>服务器目录 一般为根目录 Servers&#x2F;服务器 目录</li>
 </ol>
-<h1 id="相关参考"><a href="#相关参考" class="headerlink" title="相关参考"></a>相关参考</h1><p><a target="_blank" rel="noopener" href="https://github.com/marketplace?type=actions&query=actions">Github Actiom 市场</a><br><a target="_blank" rel="noopener" href="https://github.com/actions/setup-node">Action nodejs-setup</a><br><a target="_blank" rel="noopener" href="https://github.com/peaceiris/actions-gh-pages">Action deploy-pages</a></p>
+<h1 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h1><ol>
+<li>command.dat</li>
+<li>config.json</li>
+<li>plugins</li>
+</ol>
+<h1 id="command-dat"><a href="#command-dat" class="headerlink" title="command.dat"></a>command.dat</h1><p>位于服务器目录 &#x2F;server&#x2F;command.dat<br>此文件为<strong>配置基础信息</strong></p>
+<h2 id="值解析"><a href="#值解析" class="headerlink" title="值解析"></a>值解析</h2><ol>
+<li><p>Name<br>为服务器名字 最少5个字符，最多(好像是11)</p>
+</li>
+<li><p>Map<br> 此为选择的地图 可在根目录 Maps 寻找名字</p>
+</li>
+<li><p>Welcome<br> 玩家进入的欢迎语</p>
+</li>
+<li><p>Maxplayers<br> 最大玩家在线 原版最多为24</p>
+</li>
+<li><p>Port<br> 为服务器进入端口 默认27015</p>
+<blockquote>
+<p>需要保证此端口+1也可以被联通 此为steam通信端口(好像是这样的)</p>
+</blockquote>
+</li>
+<li><p>PVP 或 PVE</p>
+</li>
+<li><p>Mode<br>Easy |  Normal   |  Hard<br> 为服务器显示难度</p>
+<blockquote>
+<p>为什么是显示难度，因为可在config.json改难度的内容，所以你可以把简单调成困难的内容</p>
+</blockquote>
+</li>
+<li><p>loadout<br>255&#x2F;id&#x2F;id&#x2F;id<br>出生装备 前面的255不能省</p>
+</li>
+<li><p>Owner<br> Steam64位ID<br> 服主指定</p>
+</li>
+<li><p>perspective<br>first | third | both | vehicle<br>视角允许</p>
+</li>
+<li><p>chatrate<br>聊天时间 间隔数 单位s </p>
+</li>
+<li><p>bind<br>ip<br>绑定服务器ip</p>
+</li>
+<li><p>Hide_Admins<br>隐藏服务器管理员名字高亮</p>
+</li>
+</ol>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs text">Name Light_city<br>Port 27015<br>Maxplayers 24<br>Map Russia<br>Mode Normal<br>Perspective Both<br></code></pre></td></tr></table></figure>
+
+<h1 id="config-json"><a href="#config-json" class="headerlink" title="config.json"></a>config.json</h1><p>位于根目录 config.json</p>
+<h2 id="GLST"><a href="#GLST" class="headerlink" title="GLST"></a>GLST</h2><p>在现在的版本，要能在官方服务器搜索列表显示，必须要有GLST<br>GLST 关联账号与服务器的密钥<br>在 <a target="_blank" rel="noopener" href="https://steamcommunity.com/dev/managegameservers">GLST</a><br>查看对账号的需求<br>看下方的创建<br>游戏id为 <strong>304930</strong><br>复制对应的登录令牌到 config.json 的 Login_Token 中</p>
+<h2 id="Browser"><a href="#Browser" class="headerlink" title="Browser"></a>Browser</h2><h1 id="更多"><a href="#更多" class="headerlink" title="更多"></a>更多</h1><a href="/posts/UnturnedMaintain1/" title="未转变者常见问题解决方案">未转变者常见问题解决方案</a>
+<a href="/posts/UnturnedMaintain2/" title="未转变者维护插件配置">未转变者维护插件配置</a>
+<a href="/posts/StartUnturned/" title="未转变者服务器初始化">未转变者服务器初始化</a>
+
+<h1 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h1><p><a target="_blank" rel="noopener" href="https://www.unbbs.net/258.html">傻瓜式架设专用服 | 开服教程</a><br><a target="_blank" rel="noopener" href="https://www.unbbs.net/1587.html">服务器显示在|互联网|列表</a></p>
 
                 
               </div>
@@ -326,12 +369,12 @@
     
       <span class="category-chain">
         
-  <a href="/categories/Github/" class="category-chain-item">Github</a>
+  <a href="/categories/GameServer/" class="category-chain-item">GameServer</a>
   
   
     <span>></span>
     
-  <a href="/categories/Github/Action/" class="category-chain-item">Action</a>
+  <a href="/categories/GameServer/Unturned/" class="category-chain-item">Unturned</a>
   
   
 
@@ -348,11 +391,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Github/">#Github</a>
-      
-        <a href="/tags/GithubAction/">#GithubAction</a>
-      
-        <a href="/tags/hexo/">#hexo</a>
+        <a href="/tags/GameServerMaintain/">#GameServerMaintain</a>
       
     </div>
   
@@ -364,8 +403,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>github Action自动化部署hexo博客</div>
-      <div>https://blog.ltfy.top/post/githubActionDeployHexo/</div>
+      <div>未转变者维护配置</div>
+      <div>https://blog.ltfy.top/posts/UnturnedMaintain/</div>
     </div>
     <div class="license-meta">
       
@@ -377,7 +416,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年8月1日</div>
+          <div>2022年9月30日</div>
         </div>
       
       
@@ -407,9 +446,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/post/termuxForHexoWrite/" title="利用termux写hexo博客">
+                      <a href="/posts/UnturnedMaintain1/" title="未转变者常见问题解决方案">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">利用termux写hexo博客</span>
+                        <span class="hidden-mobile">未转变者常见问题解决方案</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -417,8 +456,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/post/setDebianIbus-rime/" title="设置Debian系统的Ibus-rime">
-                        <span class="hidden-mobile">设置Debian系统的Ibus-rime</span>
+                      <a href="/posts/StartUnturned/" title="未转变者服务器初始化">
+                        <span class="hidden-mobile">未转变者服务器初始化</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
